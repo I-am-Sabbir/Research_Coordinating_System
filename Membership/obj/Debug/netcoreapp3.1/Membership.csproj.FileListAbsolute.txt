@@ -1,0 +1,15 @@
+G:\Projects\Research_Coordinating_System\Membership\bin\Debug\netcoreapp3.1\Membership.deps.json
+G:\Projects\Research_Coordinating_System\Membership\bin\Debug\netcoreapp3.1\Membership.runtimeconfig.json
+G:\Projects\Research_Coordinating_System\Membership\bin\Debug\netcoreapp3.1\Membership.runtimeconfig.dev.json
+G:\Projects\Research_Coordinating_System\Membership\bin\Debug\netcoreapp3.1\Membership.dll
+G:\Projects\Research_Coordinating_System\Membership\bin\Debug\netcoreapp3.1\Membership.pdb
+G:\Projects\Research_Coordinating_System\Membership\bin\Debug\netcoreapp3.1\Data.dll
+G:\Projects\Research_Coordinating_System\Membership\bin\Debug\netcoreapp3.1\Data.pdb
+G:\Projects\Research_Coordinating_System\Membership\obj\Debug\netcoreapp3.1\Membership.csprojAssemblyReference.cache
+G:\Projects\Research_Coordinating_System\Membership\obj\Debug\netcoreapp3.1\Membership.AssemblyInfoInputs.cache
+G:\Projects\Research_Coordinating_System\Membership\obj\Debug\netcoreapp3.1\Membership.AssemblyInfo.cs
+G:\Projects\Research_Coordinating_System\Membership\obj\Debug\netcoreapp3.1\Membership.csproj.CoreCompileInputs.cache
+G:\Projects\Research_Coordinating_System\Membership\obj\Debug\netcoreapp3.1\Membership.csproj.CopyComplete
+G:\Projects\Research_Coordinating_System\Membership\obj\Debug\netcoreapp3.1\Membership.dll
+G:\Projects\Research_Coordinating_System\Membership\obj\Debug\netcoreapp3.1\Membership.pdb
+G:\Projects\Research_Coordinating_System\Membership\obj\Debug\netcoreapp3.1\Membership.genruntimeconfig.cache

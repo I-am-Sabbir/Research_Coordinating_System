@@ -1,0 +1,14 @@
+G:\Projects\Research_Coordinating_System\Framework\bin\Debug\netcoreapp3.1\Framework.deps.json
+G:\Projects\Research_Coordinating_System\Framework\bin\Debug\netcoreapp3.1\Framework.dll
+G:\Projects\Research_Coordinating_System\Framework\bin\Debug\netcoreapp3.1\Framework.pdb
+G:\Projects\Research_Coordinating_System\Framework\bin\Debug\netcoreapp3.1\Data.dll
+G:\Projects\Research_Coordinating_System\Framework\bin\Debug\netcoreapp3.1\Membership.dll
+G:\Projects\Research_Coordinating_System\Framework\bin\Debug\netcoreapp3.1\Membership.pdb
+G:\Projects\Research_Coordinating_System\Framework\bin\Debug\netcoreapp3.1\Data.pdb
+G:\Projects\Research_Coordinating_System\Framework\obj\Debug\netcoreapp3.1\Framework.csprojAssemblyReference.cache
+G:\Projects\Research_Coordinating_System\Framework\obj\Debug\netcoreapp3.1\Framework.AssemblyInfoInputs.cache
+G:\Projects\Research_Coordinating_System\Framework\obj\Debug\netcoreapp3.1\Framework.AssemblyInfo.cs
+G:\Projects\Research_Coordinating_System\Framework\obj\Debug\netcoreapp3.1\Framework.csproj.CoreCompileInputs.cache
+G:\Projects\Research_Coordinating_System\Framework\obj\Debug\netcoreapp3.1\Framework.csproj.CopyComplete
+G:\Projects\Research_Coordinating_System\Framework\obj\Debug\netcoreapp3.1\Framework.dll
+G:\Projects\Research_Coordinating_System\Framework\obj\Debug\netcoreapp3.1\Framework.pdb

@@ -170,6 +170,7 @@ G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Views\Home\ListUsers.cshtml.g.cs
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Views\Home\Report.cshtml.g.cs
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_AdminLayout.cshtml.g.cs
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -187,4 +188,3 @@ G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Research_Coordinating_System.dll
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Research_Coordinating_System.pdb
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Research_Coordinating_System.genruntimeconfig.cache
-G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Views\Home\Report.cshtml.g.cs

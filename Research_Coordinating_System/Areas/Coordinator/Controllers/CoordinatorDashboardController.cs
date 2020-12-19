@@ -8,18 +8,15 @@ using Research_Coordinating_System.Areas.Coordinator.Models;
 
 namespace Research_Coordinating_System.Areas.Coordinator.Controllers
 {
+    [Area("Coordinator")]
+    [Authorize(Roles = "Coordinator")]
     public class CoordinatorDashboardController : Controller
     {
-        [Area("Coordinator")]
-        [Authorize(Roles = "Coordinator")]
-        public class AdminDashboardController : Controller
-        {
             public IActionResult Index()
             {
                 var model = new CoordinatorDashBoardModel();
                 return View(model);
 
             }
-        }
     }
 }

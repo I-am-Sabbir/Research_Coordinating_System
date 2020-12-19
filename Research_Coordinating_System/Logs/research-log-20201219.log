@@ -1,0 +1,122 @@
+2020-12-19 16:09:59.945 +06:00 [Information] Application Starting up
+2020-12-19 16:10:03.091 +06:00 [Error] An unhandled exception has occurred while executing the request.
+System.NotImplementedException: The method or operation is not implemented.
+   at Membership.Entities.ApplicationUser.Equals(Object obj) in G:\Projects\Research_Coordinating_System\Membership\Entities\ApplicationUser.cs:line 62
+   at System.Collections.Generic.ObjectEqualityComparer`1.IndexOf(T[] array, T value, Int32 startIndex, Int32 count)
+   at System.Array.IndexOf[T](T[] array, T value, Int32 startIndex, Int32 count)
+   at System.Collections.Generic.List`1.IndexOf(T item)
+   at System.Collections.Generic.List`1.Contains(T item)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.CheckForCircularReference(JsonWriter writer, Object value, JsonProperty property, JsonContract contract, JsonContainerContract containerContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.CalculatePropertyValues(JsonWriter writer, Object value, JsonContainerContract contract, JsonProperty member, JsonProperty property, JsonContract& memberContract, Object& memberValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeObject(JsonWriter writer, Object value, JsonObjectContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeValue(JsonWriter writer, Object value, JsonContract valueContract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeList(JsonWriter writer, IEnumerable values, JsonArrayContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeValue(JsonWriter writer, Object value, JsonContract valueContract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.Serialize(JsonWriter jsonWriter, Object value, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.SerializeInternal(JsonWriter jsonWriter, Object value, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Serialize(JsonWriter jsonWriter, Object value, Type objectType)
+   at Newtonsoft.Json.JsonConvert.SerializeObjectInternal(Object value, Type type, JsonSerializer jsonSerializer)
+   at Newtonsoft.Json.JsonConvert.SerializeObject(Object value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.SerializeObject(Object value)
+   at Research_Coordinating_System.Controllers.HomeController.ListUsers() in G:\Projects\Research_Coordinating_System\Research_Coordinating_System\Controllers\HomeController.cs:line 48
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-12-19 16:10:19.347 +06:00 [Information] Application Starting up
+2020-12-19 16:21:17.501 +06:00 [Information] Application Starting up
+2020-12-19 16:22:02.734 +06:00 [Information] Application Starting up
+2020-12-19 16:24:06.506 +06:00 [Information] Application Starting up
+2020-12-19 16:25:17.549 +06:00 [Information] Application Starting up
+2020-12-19 16:26:57.190 +06:00 [Information] Application Starting up
+2020-12-19 16:29:58.051 +06:00 [Information] Application Starting up
+2020-12-19 16:31:25.832 +06:00 [Information] Application Starting up
+2020-12-19 16:32:49.207 +06:00 [Information] Application Starting up
+2020-12-19 16:33:12.338 +06:00 [Information] Application Starting up
+2020-12-19 16:33:52.232 +06:00 [Information] Application Starting up
+2020-12-19 16:34:26.593 +06:00 [Information] Application Starting up
+2020-12-19 16:34:53.854 +06:00 [Information] Application Starting up
+2020-12-19 16:35:43.296 +06:00 [Information] Application Starting up
+2020-12-19 16:36:16.571 +06:00 [Information] Application Starting up
+2020-12-19 16:37:15.797 +06:00 [Information] Application Starting up
+2020-12-19 16:39:55.478 +06:00 [Information] Application Starting up
+2020-12-19 16:40:26.837 +06:00 [Information] Application Starting up
+2020-12-19 16:46:23.104 +06:00 [Information] Application Starting up
+2020-12-19 16:48:03.591 +06:00 [Information] Application Starting up
+2020-12-19 16:50:17.654 +06:00 [Information] Application Starting up
+2020-12-19 16:50:55.667 +06:00 [Information] Application Starting up
+2020-12-19 16:52:43.178 +06:00 [Information] Application Starting up
+2020-12-19 16:56:01.866 +06:00 [Information] Application Starting up
+2020-12-19 16:56:30.444 +06:00 [Information] Application Starting up
+2020-12-19 16:56:52.181 +06:00 [Information] Application Starting up
+2020-12-19 16:57:39.185 +06:00 [Information] Application Starting up
+2020-12-19 16:58:47.895 +06:00 [Information] Application Starting up
+2020-12-19 16:59:31.005 +06:00 [Information] Application Starting up
+2020-12-19 17:03:38.915 +06:00 [Information] Application Starting up
+2020-12-19 17:04:06.800 +06:00 [Information] Application Starting up
+2020-12-19 17:04:30.009 +06:00 [Information] Application Starting up
+2020-12-19 17:05:11.442 +06:00 [Information] Application Starting up
+2020-12-19 17:06:12.447 +06:00 [Information] Application Starting up
+2020-12-19 17:06:46.359 +06:00 [Information] Application Starting up
+2020-12-19 17:08:12.943 +06:00 [Information] Application Starting up
+2020-12-19 17:08:56.552 +06:00 [Information] Application Starting up
+2020-12-19 17:09:18.450 +06:00 [Information] Application Starting up
+2020-12-19 17:10:01.261 +06:00 [Information] Application Starting up
+2020-12-19 17:11:30.868 +06:00 [Information] Application Starting up
+2020-12-19 17:14:35.486 +06:00 [Information] Application Starting up
+2020-12-19 17:15:34.146 +06:00 [Information] Application Starting up
+2020-12-19 17:16:08.568 +06:00 [Information] Application Starting up
+2020-12-19 17:18:36.335 +06:00 [Information] Application Starting up
+2020-12-19 17:21:01.218 +06:00 [Information] Application Starting up
+2020-12-19 17:25:09.961 +06:00 [Information] Application Starting up
+2020-12-19 17:27:10.425 +06:00 [Information] Application Starting up
+2020-12-19 17:29:20.615 +06:00 [Information] Application Starting up
+2020-12-19 17:29:40.875 +06:00 [Information] Application Starting up
+2020-12-19 17:30:35.706 +06:00 [Information] Application Starting up
+2020-12-19 17:31:03.015 +06:00 [Information] Application Starting up
+2020-12-19 17:32:48.622 +06:00 [Information] Application Starting up
+2020-12-19 17:33:10.277 +06:00 [Information] Application Starting up
+2020-12-19 17:33:28.804 +06:00 [Information] Application Starting up
+2020-12-19 17:35:28.695 +06:00 [Information] Application Starting up
+2020-12-19 17:38:08.339 +06:00 [Information] Application Starting up
+2020-12-19 17:41:48.633 +06:00 [Information] Application Starting up
+2020-12-19 17:42:46.641 +06:00 [Information] Application Starting up
+2020-12-19 17:42:59.238 +06:00 [Information] Application Starting up
+2020-12-19 17:55:37.378 +06:00 [Information] Application Starting up
+2020-12-19 17:58:37.675 +06:00 [Information] Application Starting up
+2020-12-19 18:02:25.051 +06:00 [Information] Application Starting up
+2020-12-19 18:03:27.412 +06:00 [Information] Application Starting up
+2020-12-19 18:06:49.207 +06:00 [Information] Application Starting up
+2020-12-19 18:10:47.531 +06:00 [Information] Application Starting up
+2020-12-19 18:12:51.016 +06:00 [Information] Application Starting up
+2020-12-19 18:13:35.043 +06:00 [Information] Application Starting up
+2020-12-19 18:14:07.033 +06:00 [Information] Application Starting up
+2020-12-19 18:15:20.184 +06:00 [Information] Application Starting up
+2020-12-19 18:16:14.431 +06:00 [Information] Application Starting up
+2020-12-19 18:17:05.124 +06:00 [Information] Application Starting up
+2020-12-19 18:18:18.097 +06:00 [Information] Application Starting up
+2020-12-19 18:18:57.127 +06:00 [Information] Application Starting up
+2020-12-19 18:20:47.814 +06:00 [Information] Application Starting up
+2020-12-19 18:37:32.747 +06:00 [Information] Application Starting up

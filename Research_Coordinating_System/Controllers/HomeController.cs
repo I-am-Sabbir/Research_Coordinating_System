@@ -47,5 +47,10 @@ namespace Research_Coordinating_System.Controllers
                                        select ApplicationUser).ToList();
             return Json(JsonConvert.SerializeObject(user));
         }
+
+        public IActionResult Report()
+        {
+            return View();
+        }
     }
 }

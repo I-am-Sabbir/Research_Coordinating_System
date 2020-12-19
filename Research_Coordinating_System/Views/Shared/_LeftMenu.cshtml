@@ -1,4 +1,4 @@
-﻿@model LeftMenuModel
+﻿@model Research_Coordinating_System.Models.MenuModel
 
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
@@ -20,9 +20,19 @@
             </div>
         </div>
 
-        <!-- Sidebar Menu -->
-       
-        <!-- /.sidebar-menu -->
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            @foreach (var item in Model.MenuItems)
+            {
+                <li class="nav-item">
+                    <a class="nav-link" href="@item.url">
+                        <p>@item.Title</p>
+                    </a>
+
+                </li>
+            }
+        </ul>
+            <!-- Sidebar Menu -->
+            <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
 </aside>

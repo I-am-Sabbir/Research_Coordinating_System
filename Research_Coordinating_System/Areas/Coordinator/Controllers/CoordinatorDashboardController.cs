@@ -12,11 +12,17 @@ namespace Research_Coordinating_System.Areas.Coordinator.Controllers
     [Authorize(Roles = "Coordinator")]
     public class CoordinatorDashboardController : Controller
     {
-            public IActionResult Index()
-            {
-                var model = new CoordinatorDashBoardModel();
-                return View(model);
+        public IActionResult Index()
+        {
+            var model = new CoordinatorDashBoardModel();
+            return View(model);
 
-            }
+        }
+
+        public IActionResult Report()
+        {
+            var model = new CoordinatorDashBoardModel();
+            return View(model);
+        }
     }
 }

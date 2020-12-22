@@ -1,0 +1,23 @@
+﻿@model Research_Coordinating_System.Areas.Admin.Models.AdminDashBoardModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="content-wrapper">
+    <h1>Index</h1>
+
+    <div>
+        <h4>AdminBaseModel</h4>
+        <hr />
+        <dl class="row">
+        </dl>
+    </div>
+    <div>
+        @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+</div>

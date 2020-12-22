@@ -56,27 +56,27 @@ namespace Research_Coordinating_System.Areas.Admin.Models
                     new MenuItem
                     {
                         Title = "Register Faculty",
-                        url = ""
+                        url = "#"
                         
                     },
 
                     new MenuItem
                     {
                         Title = "Assign Coordinator",
-                        url = ""
+                        url = "#"
 
                     },
                     new MenuItem
                     {
                         Title = "Task",
-                        url = ""
+                        url = "#"
 
                     },
 
                     new MenuItem
                     {
                         Title = "Log Out",
-                        url = ""
+                        url = "#"
 
                     }
                 }

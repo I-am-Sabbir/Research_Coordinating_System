@@ -11,10 +11,10 @@ namespace Research_Coordinating_System.Models
     {
         //public AdminBaseModel AdminBaseModel { get; set; }
         //public CoordinatorBaseModel CoordinatorBaseModel { get; set; }
-        public MenuModel MenuModel { get; private set; }
-        public LeftMenuModel()
-        {
-            MenuModel = new MenuModel();
-        }
+        //public MenuModel MenuModel { get; private set; }
+        //public LeftMenuModel()
+        //{
+        //    MenuModel = new MenuModel();
+        //}
     }
 }

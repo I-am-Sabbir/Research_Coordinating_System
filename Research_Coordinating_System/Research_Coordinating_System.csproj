@@ -29,10 +29,7 @@
   
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Views\" />
     <Folder Include="Areas\Coordinator\Data\" />
-    <Folder Include="Areas\Coordinator\Controllers\" />
-    <Folder Include="Areas\Coordinator\Views\" />
     <Folder Include="Areas\Identities\Views\" />
     <Folder Include="Data\Migrations\" />
     <Folder Include="Logs\" />

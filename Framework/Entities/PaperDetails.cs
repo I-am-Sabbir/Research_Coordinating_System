@@ -14,8 +14,14 @@ namespace Framework.Entities
         public string Volume { get; set; }
         public string Page { get; set; }
         public string ConferenceLocation { get; set; }
+
+        public int PaperCategoryId { get; set; }
         public PaperCategory PaperCategory { get; set; }
+
+        public int ResearchSeminarId { get; set; }
         public ResearchSeminar ResearchSeminar { get; set; }
+
+        public int ResearchCollaborationId { get; set; }
         public ResearchCollaboration ResearchCollaboration { get; set; }
     }
 }

@@ -7,11 +7,11 @@ using Framework.Repositories;
 
 namespace Framework.Services
 {
-    public class ResearchSeminarservice : IResearchSeminarservice
+    public class ResearchSeminarService : IResearchSeminarService
     {
         private IFrameworkUnitOfWork _frameworkUnitOfWork;
 
-        public ResearchSeminarservice(IFrameworkUnitOfWork frameworkUnitOfWork)
+        public ResearchSeminarService(IFrameworkUnitOfWork frameworkUnitOfWork)
         {
             _frameworkUnitOfWork = frameworkUnitOfWork;
         }

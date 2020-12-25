@@ -5,7 +5,7 @@ using Framework.Entities;
 
 namespace Framework.Services
 {
-    public interface IResearchSeminarservice : IDisposable
+    public interface IResearchSeminarService : IDisposable
     {
         (IList<ResearchSeminar> researchSeminars, int total, int totalDisplay) GetResearchSeminars(int pageindex,
                                                                               int Pagesize,

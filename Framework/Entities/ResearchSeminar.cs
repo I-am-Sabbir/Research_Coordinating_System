@@ -13,6 +13,8 @@ namespace Framework.Entities
         public DateTime Date { get; set; }
         public string Vanue { get; set; }
         public string NumberOfParticipants { get; set; }
+
+        public int PaperDetailsId { get; set; }
         public PaperDetails PaperDetails { get; set; }
     }
 }

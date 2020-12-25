@@ -1,3 +1,10 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
@@ -10,12 +17,7 @@ using Membership.Entities;
 using Membership.Services;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Builder;
-using System;
-using Membership;
 using Framework;
-//using Blog.Framework;
 
 namespace Research_Coordinating_System
 {
@@ -32,10 +34,8 @@ namespace Research_Coordinating_System
         }
 
         public IConfigurationRoot Configuration { get; private set; }
-     //   public IConfiguration Configuration { get; }
 
         public static ILifetimeScope AutofacContainer { get; private set; }
-        // This method gets called by the runtime. Use this method to add services to the container.
 
         public void ConfigureContainer(ContainerBuilder builder)
         {
@@ -43,9 +43,11 @@ namespace Research_Coordinating_System
             var connectionString = Configuration.GetConnectionString(connectionStringName);
             var migrationAssemblyName = typeof(Startup).Assembly.FullName;
 
-           builder.RegisterModule(new FrameworkModule(connectionString, migrationAssemblyName));
-           // builder.RegisterModule(new WebModule(connectionString, migrationAssemblyName));
+            builder.RegisterModule(new FrameworkModule(connectionString, migrationAssemblyName));
+            //builder.RegisterModule(new WebModule(connectionString, migrationAssemblyName));
         }
+
+        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             var connectionStringName = "DefaultConnection";
@@ -55,8 +57,8 @@ namespace Research_Coordinating_System
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(connectionString, b => b.MigrationsAssembly(migrationAssemblyName)));
 
-            //services.AddDbContext<FrameworkContext>(options =>
-              // options.UseSqlServer(connectionString, b => b.MigrationsAssembly(migrationAssemblyName)));
+            services.AddDbContext<FrameworkContext>(options =>
+               options.UseSqlServer(connectionString, b => b.MigrationsAssembly(migrationAssemblyName)));
             services
                 .AddIdentity<ApplicationUser, Role>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
@@ -131,7 +133,7 @@ namespace Research_Coordinating_System
             {
                 endpoints.MapControllerRoute(
                     name: "areas",
-                    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}");
 
                 endpoints.MapControllerRoute(
                     name: "default",

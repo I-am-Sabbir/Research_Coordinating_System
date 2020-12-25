@@ -13,6 +13,8 @@ namespace Framework.Entities
         public DateTime DeadLine { get; set; }
         public string File { get; set; }
         public Guid UserId { get; set; }
+
+        //Problem
         public ApplicationUser ApplicationUser { get; set; }
     }
 }

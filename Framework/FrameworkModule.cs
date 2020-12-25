@@ -1,4 +1,6 @@
 ﻿using Autofac;
+using Framework.Repositories;
+using Framework.Services;
 using Membership.Contexts;
 using Membership.Data;
 using Membership.Services;
@@ -20,11 +22,20 @@ namespace Framework
 
         protected override void Load(ContainerBuilder builder)
         {
+            builder.RegisterType<FrameworkContext>()
+                .WithParameter("connectionString", _connectionString)
+                .WithParameter("migrationAssemblyName", _migrationAssemblyName)
+                .InstancePerLifetimeScope();
+
             builder.RegisterType<ApplicationDbContext>()
                 .WithParameter("connectionString", _connectionString)
                 .WithParameter("migrationAssemblyName", _migrationAssemblyName)
                 .InstancePerLifetimeScope();
 
+            builder.RegisterType<FrameworkUnitOfWork>().As<IFrameworkUnitOfWork>()
+                .InstancePerLifetimeScope();
+
+            
             builder.RegisterType<AccountSeed>()
                 .InstancePerLifetimeScope();
 
@@ -33,6 +44,38 @@ namespace Framework
 
             builder.RegisterType<CurrentUserService>().As<ICurrentUserService>()
            .InstancePerLifetimeScope();
+
+            //Repositories
+            builder.RegisterType<PaperCategoryRepository>().As<IPaperCategoryRepository>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<PaperDetailsRepository>().As<IPaperDetailsRepository>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<ResearchCollaborationRepository>().As<IResearchCollaborationRepository>()
+                .InstancePerLifetimeScope();
+            
+            builder.RegisterType<ResearchSeminarRepository>().As<IResearchSeminarRepository>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<TaskRepository>().As<ITaskRepository>()
+                .InstancePerLifetimeScope();
+
+            //Services
+            builder.RegisterType<PaperCategoryService>().As<IPaperCategoryService>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<PaperDetailsService>().As<IPaperDetailsService>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<ResearchCollaborationService>().As<IResearchCollaborationService>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<ResearchSeminarService>().As<IResearchSeminarService>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<TaskService>().As<ITaskService>()
+                .InstancePerLifetimeScope();
 
 
             base.Load(builder);

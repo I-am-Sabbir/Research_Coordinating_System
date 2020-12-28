@@ -33,53 +33,6 @@ namespace Framework
         {
 
             base.OnModelCreating(builder);
-
-            builder.Entity<PaperDetails>(PD =>
-            {
-                PD.HasKey(rc => new { rc.Id, rc.ResearchCollaborationId });
-
-                PD.HasOne(pd => pd.ResearchCollaboration)
-                .WithOne()
-                .HasForeignKey<PaperDetails>(pd => pd.ResearchCollaborationId);
-            });
-
-            builder.Entity<PaperDetails>(PD =>
-            {
-                PD.HasKey(rc => new { rc.Id, rc.ResearchSeminarId });
-
-                PD.HasOne(pd => pd.ResearchSeminar)
-                .WithOne()
-                .HasForeignKey<PaperDetails>(pd => pd.ResearchSeminarId);
-            });
-
-            builder.Entity<ResearchCollaboration>(RC =>
-            {
-                RC.HasKey(rc => new { rc.Id, rc.PaperDetailsId });
-
-                RC.HasOne(rc => rc.PaperDetails)
-                .WithOne()
-                .HasForeignKey<ResearchCollaboration>(rc => rc.PaperDetailsId)
-                .IsRequired();
-            });
-
-            builder.Entity<ResearchSeminar>(RS => 
-            {
-                RS.HasKey(rs => new { rs.Id, rs.PaperDetailsId });
-
-                RS.HasOne(rs => rs.PaperDetails)
-                .WithOne()
-                .HasForeignKey<ResearchSeminar>(rs => rs.PaperDetailsId)
-                .IsRequired();
-            });
-
-            builder.Entity<Task>(Task =>
-            {
-                Task.HasKey(t => new { t.Id, t.UserId });
-
-                Task.HasOne(t => t.ApplicationUser);
-                //.WithMany(au => au.Task);
-            });
-
         }
 
         public DbSet<PaperCategory> PaperCategories { get; set; }

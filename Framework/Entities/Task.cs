@@ -15,6 +15,6 @@ namespace Framework.Entities
         public Guid UserId { get; set; }
 
         //Problem
-        public ApplicationUser ApplicationUser { get; set; }
+        //public ApplicationUser ApplicationUser { get; set; }
     }
 }

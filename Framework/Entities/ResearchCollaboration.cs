@@ -13,7 +13,7 @@ namespace Framework.Entities
         public string Description { get; set; }
         public DateTime Date { get; set; }
 
-        public int PaperDetailsId { get; set; }
+        //public int PaperDetailsId { get; set; }
         public PaperDetails PaperDetails { get; set; }
 
     }

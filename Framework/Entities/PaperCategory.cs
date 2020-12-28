@@ -9,6 +9,6 @@ namespace Framework.Entities
     {
         public int Id { get; set; }
         public string CategoryName { get; set; }
-        public ICollection<PaperDetails> PaperDetails { get; set; }
+        public IList<PaperDetails> PaperDetails { get; set; }
     }
 }

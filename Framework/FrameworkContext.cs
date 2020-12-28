@@ -31,6 +31,17 @@ namespace Framework
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.Entity<PaperDetails>()
+                .HasOne(p => p.PaperCategory)
+                .WithMany(c => c.PaperDetails);
+
+            builder.Entity<PaperDetails>()
+                .HasOne(p => p.ResearchSeminar)
+                .WithOne(r => r.PaperDetails);
+
+            builder.Entity<PaperDetails>()
+                .HasOne(p => p.ResearchCollaboration)
+                .WithOne(c => c.PaperDetails);
 
             base.OnModelCreating(builder);
         }

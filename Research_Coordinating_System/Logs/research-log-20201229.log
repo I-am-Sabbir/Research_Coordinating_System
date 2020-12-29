@@ -106,3 +106,4 @@ System.InvalidOperationException: A second operation started on this context bef
    at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
    at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
 2020-12-29 19:40:22.755 +06:00 [Information] Application Starting up
+2020-12-29 19:55:58.911 +06:00 [Information] Application Starting up

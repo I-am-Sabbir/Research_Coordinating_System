@@ -15,7 +15,7 @@ namespace Research_Coordinating_System.Areas.Admin.Models.AssignCoordinator
 
         internal object GetUsers(DataTablesAjaxRequestModel dataTables)
         {
-            var data = _userService.GetAll(
+            var data = _userService.GetAllUser(
                                     dataTables.PageIndex,
                                     dataTables.PageSize,
                                     dataTables.SearchText,

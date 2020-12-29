@@ -37,7 +37,6 @@
           "ReflectionIT.Mvc.Paging": "4.0.0",
           "Serilog": "2.9.0",
           "Serilog.AspNetCore": "3.4.0",
-          "Serilog.Sinks.RollingFile": "3.3.0",
           "System.Data.SqlClient": "4.8.2",
           "System.Linq.Dynamic.Core": "1.2.2",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",

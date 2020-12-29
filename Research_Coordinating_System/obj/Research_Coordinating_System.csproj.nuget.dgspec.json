@@ -375,10 +375,6 @@
               "target": "Package",
               "version": "[3.4.0, )"
             },
-            "Serilog.Sinks.RollingFile": {
-              "target": "Package",
-              "version": "[3.3.0, )"
-            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.2, )"

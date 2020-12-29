@@ -63,7 +63,7 @@ namespace Research_Coordinating_System.Areas.Admin.Models
                     new MenuItem
                     {
                         Title = "Assign Coordinator",
-                        url = "#"
+                        url = "/Admin/AssignCoordinator/Index"
 
                     },
                     new MenuItem

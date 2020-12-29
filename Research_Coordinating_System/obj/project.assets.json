@@ -9633,7 +9633,6 @@
       "ReflectionIT.Mvc.Paging >= 4.0.0",
       "Serilog >= 2.9.0",
       "Serilog.AspNetCore >= 3.4.0",
-      "Serilog.Sinks.RollingFile >= 3.3.0",
       "System.Data.SqlClient >= 4.8.2",
       "System.Linq.Dynamic.Core >= 1.2.2"
     ]
@@ -9725,10 +9724,6 @@
           "Serilog.AspNetCore": {
             "target": "Package",
             "version": "[3.4.0, )"
-          },
-          "Serilog.Sinks.RollingFile": {
-            "target": "Package",
-            "version": "[3.3.0, )"
           },
           "System.Data.SqlClient": {
             "target": "Package",

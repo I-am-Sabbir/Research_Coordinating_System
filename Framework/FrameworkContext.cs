@@ -37,11 +37,13 @@ namespace Framework
 
             builder.Entity<PaperDetails>()
                 .HasOne(p => p.ResearchSeminar)
-                .WithOne(r => r.PaperDetails);
+                .WithOne(r => r.PaperDetails)
+                .HasForeignKey<ResearchSeminar>(r => r.PaperDetailsId);
 
             builder.Entity<PaperDetails>()
                 .HasOne(p => p.ResearchCollaboration)
-                .WithOne(c => c.PaperDetails);
+                .WithOne(c => c.PaperDetails)
+                .HasForeignKey<ResearchCollaboration>(c => c.PaperDetailsId);
 
             base.OnModelCreating(builder);
         }

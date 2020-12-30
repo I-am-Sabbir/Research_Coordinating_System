@@ -89,7 +89,7 @@ namespace Research_Coordinating_System
             });
 
             services.ConfigureApplicationCookie(options => {
-                options.LoginPath = "/Identity/Account/Login";
+                options.LoginPath = "/Identities/Login/Index";
             });
 
             services.AddSession(options =>

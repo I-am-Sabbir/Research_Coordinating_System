@@ -1,0 +1,39 @@
+2020-12-30 18:36:39.945 +06:00 [Information] Application Starting up
+2020-12-30 18:37:11.334 +06:00 [Error] An exception occurred while iterating over the results of a query for context type '"Membership.Contexts.ApplicationDbContext"'."
+""System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()"
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+2020-12-30 18:50:01.468 +06:00 [Information] Application Starting up
+2020-12-30 18:54:54.450 +06:00 [Information] Application Starting up
+2020-12-30 19:05:35.868 +06:00 [Information] Application Starting up
+2020-12-30 19:06:58.985 +06:00 [Information] Application Starting up
+2020-12-30 19:09:57.221 +06:00 [Information] Application Starting up
+2020-12-30 21:01:51.635 +06:00 [Information] Application Starting up
+2020-12-30 21:01:59.644 +06:00 [Information] User logged out.
+2020-12-30 21:03:27.751 +06:00 [Information] Application Starting up
+2020-12-30 21:03:56.454 +06:00 [Information] Application Starting up
+2020-12-30 21:09:05.876 +06:00 [Information] Application Starting up
+2020-12-30 21:10:46.968 +06:00 [Information] Application Starting up
+2020-12-30 21:25:50.113 +06:00 [Information] Application Starting up
+2020-12-30 21:26:34.172 +06:00 [Information] User logged in.
+2020-12-30 21:31:50.119 +06:00 [Information] Application Starting up
+2020-12-30 21:31:57.773 +06:00 [Information] User logged out.
+2020-12-30 21:32:17.269 +06:00 [Information] User logged in.
+2020-12-30 21:32:34.700 +06:00 [Information] User logged out.
+2020-12-30 21:35:04.943 +06:00 [Information] Application Starting up
+2020-12-30 21:35:47.446 +06:00 [Information] User logged in.
+2020-12-30 21:35:56.999 +06:00 [Information] User logged out.
+2020-12-30 21:36:33.115 +06:00 [Warning] Invalid password for user "555d42ea-4362-46e7-d483-08d8abfbebae".
+2020-12-30 21:36:33.116 +06:00 [Warning] User "555d42ea-4362-46e7-d483-08d8abfbebae" failed to provide the correct password.
+2020-12-30 21:38:25.372 +06:00 [Warning] Invalid password for user "555d42ea-4362-46e7-d483-08d8abfbebae".
+2020-12-30 21:38:25.373 +06:00 [Warning] User "555d42ea-4362-46e7-d483-08d8abfbebae" failed to provide the correct password.
+2020-12-30 21:38:36.436 +06:00 [Warning] Invalid password for user "555d42ea-4362-46e7-d483-08d8abfbebae".
+2020-12-30 21:38:36.436 +06:00 [Warning] User "555d42ea-4362-46e7-d483-08d8abfbebae" failed to provide the correct password.
+2020-12-30 21:38:47.420 +06:00 [Information] User logged in.
+2020-12-30 21:44:35.724 +06:00 [Information] Application Starting up
+2020-12-30 21:44:42.914 +06:00 [Information] User logged out.
+2020-12-30 21:45:04.821 +06:00 [Information] User logged in.
+2020-12-30 21:46:54.511 +06:00 [Information] User logged out.

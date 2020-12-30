@@ -61,8 +61,24 @@ namespace Research_Coordinating_System.Areas.Identities.Controllers
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("User logged in.");
-                    return RedirectToAction("Index", "Dashboard", new { area = "Admin" });
+                    var user = await _userManager.FindByNameAsync(Input.Email);
+                    var role = await _userManager.GetRolesAsync(user);
+                    if(role.Contains("Admin") == true)
+                    {
+                        _logger.LogInformation("User logged in.");
+                        return RedirectToAction("Index", "AdminDashboard", new { area = "Admin" });
+                    }
+                    else if (role.Contains("Coordinator") == true)
+                    {
+                        _logger.LogInformation("User logged in.");
+                        return RedirectToAction("Index", "CoordinatorDashboard", new { area = "Coordinator" });
+                    }
+                    else
+                    {
+                        _logger.LogInformation("User logged in.");
+                        return RedirectToAction("Index", "Home", new { area = "" });
+                    }
+
                 }
 
                 else

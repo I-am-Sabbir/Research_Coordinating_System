@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Membership", "Membership\Me
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{1CCDD886-E01A-458A-9CDD-D4AA522963E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework", "Framework\Framework.csproj", "{5ABD7A1A-E154-4D0E-89D8-092B62556452}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework", "Framework\Framework.csproj", "{5ABD7A1A-E154-4D0E-89D8-092B62556452}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

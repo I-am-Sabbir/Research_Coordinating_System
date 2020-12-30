@@ -29,9 +29,14 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Coordinator\Data\" />
-    <Folder Include="Areas\Identities\Views\" />
+    <Folder Include="Areas\Identities\Views\Registration\" />
     <Folder Include="Data\Migrations\" />
     <Folder Include="Logs\" />
+    <Folder Include="Models\Category\" />
+    <Folder Include="Models\Collaboration\" />
+    <Folder Include="Models\Task\" />
+    <Folder Include="Models\Seminar\" />
+    <Folder Include="Models\Paper\" />
   </ItemGroup>
 
 </Project>

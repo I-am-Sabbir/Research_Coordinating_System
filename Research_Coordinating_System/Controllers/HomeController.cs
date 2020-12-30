@@ -29,7 +29,7 @@ namespace Research_Coordinating_System.Controllers
             return View();
         }
 
-        [Authorize(Roles = "Admin")]
+        
         public IActionResult Privacy()
         {
             return View();

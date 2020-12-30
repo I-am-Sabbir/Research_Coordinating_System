@@ -28,7 +28,7 @@ namespace Research_Coordinating_System.Areas.Admin.Models.AssignCoordinator
                         select new string[]
                         {
                                 record.Email,
-                                record.FullName.ToString()
+                                record.FullName
                         }
                    ).ToArray()
 

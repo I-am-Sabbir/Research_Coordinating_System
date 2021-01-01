@@ -1,0 +1,19 @@
+﻿@model Research_Coordinating_System.Models.FacultyDashboardModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_FacultyLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+<div>
+    <h4>FacultyDashboardModel</h4>
+    <hr />
+    <dl class="row">
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -4,15 +4,15 @@ using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Research_Coordinating_System.Models;
 
-namespace Research_Coordinating_System.Areas.Coordinator.Models
+namespace Research_Coordinating_System.Models
 {
-    public abstract class CoordinatorBaseModel
+    public abstract class FacultyBaseModel
     {
         public MenuModel MenuModel { get; set; }
 
         protected IHttpContextAccessor _httpContextAccessor;
+
         public ResponseModel Response
         {
             get
@@ -35,13 +35,13 @@ namespace Research_Coordinating_System.Areas.Coordinator.Models
             }
         }
 
-        public CoordinatorBaseModel(IHttpContextAccessor httpContextAccessor)
+        public FacultyBaseModel(IHttpContextAccessor httpContextAccessor)
         {
             _httpContextAccessor = httpContextAccessor;
             SetupMenu();
         }
 
-        public CoordinatorBaseModel()
+        public FacultyBaseModel()
         {
             _httpContextAccessor = Startup.AutofacContainer.Resolve<IHttpContextAccessor>();
             SetupMenu();
@@ -55,22 +55,21 @@ namespace Research_Coordinating_System.Areas.Coordinator.Models
                 {
                     new MenuItem
                     {
-                        Title = "Register Faculty",
-                        url = ""
+                        Title = "Submit Paper",
+                        url = "#"
 
                     },
 
                     new MenuItem
                     {
                         Title = "Task",
-                        url = ""
+                        url = "#"
 
                     },
-
                     new MenuItem
                     {
-                        Title = "View Paper Report",
-                        url = "/Coordinator/CoordinatorDashboard/Report"
+                        Title = "Notice",
+                        url = "#"
 
                     }
 
@@ -78,6 +77,5 @@ namespace Research_Coordinating_System.Areas.Coordinator.Models
             };
 
         }
-
     }
 }

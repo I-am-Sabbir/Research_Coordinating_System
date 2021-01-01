@@ -71,14 +71,8 @@ namespace Research_Coordinating_System.Areas.Admin.Models
                         Title = "Task",
                         url = "#"
 
-                    },
-
-                    new MenuItem
-                    {
-                        Title = "Log Out",
-                        url = "#"
-
                     }
+
                 }
             };
 

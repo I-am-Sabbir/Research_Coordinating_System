@@ -214,3 +214,6 @@ G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml.g.cs
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Areas\Identities\Views\Login\Index.cshtml.g.cs
+G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_FacultyLayout.cshtml.g.cs
+G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LeftMenu.cshtml.g.cs
+G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Index.cshtml.g.cs

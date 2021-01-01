@@ -37,3 +37,21 @@ System.InvalidOperationException: A second operation started on this context bef
 2020-12-30 21:44:42.914 +06:00 [Information] User logged out.
 2020-12-30 21:45:04.821 +06:00 [Information] User logged in.
 2020-12-30 21:46:54.511 +06:00 [Information] User logged out.
+2020-12-30 21:49:19.130 +06:00 [Information] Application Starting up
+2020-12-30 21:49:55.701 +06:00 [Information] User logged in.
+2020-12-30 21:50:11.716 +06:00 [Error] An exception occurred while iterating over the results of a query for context type '"Membership.Contexts.ApplicationDbContext"'."
+""System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()"
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+2020-12-30 21:51:08.471 +06:00 [Information] Application Starting up
+2020-12-30 21:51:25.916 +06:00 [Information] User logged out.
+2020-12-30 21:51:56.735 +06:00 [Warning] Invalid password for user "51cf3302-2fc8-4000-77db-08d886654102".
+2020-12-30 21:51:56.737 +06:00 [Warning] User "51cf3302-2fc8-4000-77db-08d886654102" failed to provide the correct password.
+2020-12-30 21:52:06.081 +06:00 [Information] User logged in.
+2020-12-30 21:52:15.069 +06:00 [Information] User logged out.
+2020-12-30 21:53:09.838 +06:00 [Warning] Invalid password for user "555d42ea-4362-46e7-d483-08d8abfbebae".
+2020-12-30 21:53:09.839 +06:00 [Warning] User "555d42ea-4362-46e7-d483-08d8abfbebae" failed to provide the correct password.
+2020-12-30 21:53:21.515 +06:00 [Information] User logged in.

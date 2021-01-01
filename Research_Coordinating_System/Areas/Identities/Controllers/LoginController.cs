@@ -76,7 +76,7 @@ namespace Research_Coordinating_System.Areas.Identities.Controllers
                     else
                     {
                         _logger.LogInformation("User logged in.");
-                        return RedirectToAction("Index", "Home", new { area = "" });
+                        return RedirectToAction("Index", "Dashboard", new { area = "" });
                     }
 
                 }

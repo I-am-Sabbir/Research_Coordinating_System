@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Research_Coordinating_System.Migrations.Framework
 {
-    public partial class FrameworkcontextMigration : Migration
+    public partial class FrmeworkMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -46,13 +46,12 @@ namespace Research_Coordinating_System.Migrations.Framework
                         .Annotation("SqlServer:Identity", "1, 1"),
                     PaperTilte = table.Column<string>(nullable: true),
                     AuthorName = table.Column<string>(nullable: true),
-                    Category = table.Column<string>(nullable: true),
                     Volume = table.Column<string>(nullable: true),
                     Page = table.Column<string>(nullable: true),
                     ConferenceLocation = table.Column<string>(nullable: true),
                     PaperCategoryId = table.Column<int>(nullable: false),
-                    ResearchSeminarId = table.Column<int>(nullable: false),
-                    ResearchCollaborationId = table.Column<int>(nullable: false)
+                    ResearchSeminarId = table.Column<int>(nullable: true),
+                    ResearchCollaborationId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Research_Coordinating_System.Migrations.Framework
 {
     [DbContext(typeof(FrameworkContext))]
-    [Migration("20201230084354_FrameworkcontextMigration")]
-    partial class FrameworkcontextMigration
+    [Migration("20210103200257_FrmeworkMigration")]
+    partial class FrmeworkMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -47,9 +47,6 @@ namespace Research_Coordinating_System.Migrations.Framework
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("AuthorName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Category")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ConferenceLocation")

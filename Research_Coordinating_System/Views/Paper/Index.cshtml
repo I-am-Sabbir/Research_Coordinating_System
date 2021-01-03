@@ -28,9 +28,9 @@
                                 <tr>
                                     <th>Title</th>
                                     
-                                    <th>Category</th>
-                                    
                                     <th>Author</th>
+
+                                    <th>Action</th>
 
                                 </tr>
                             </thead>
@@ -38,9 +38,9 @@
                                 <tr>
                                     <th>Title</th>
 
-                                    <th>Category</th>
-
                                     <th>Author</th>
+
+                                    <th>Action</th>
 
                                 </tr>
                             </tfoot>
@@ -70,21 +70,12 @@
                 "serverSide": true,
                 "ajax": "/Paper/GetPapers",
                 "columnDefs": [
-                    {
-
-                        "orderable": false,
-                        "targets": 3,
-                        "render": function (data, type, row) {
-                            var content = `<img src="images/${data}" width="100" />`;
-                            return content;
-                        }
-                    },
 
                     {
                         "orderable": false,
-                        "targets": 5,
+                        "targets": 2,
                         "render": function (data, type, row) {
-                            return `<button type="submit" class="btn btn-info btn-sm" onclick="window.location.href='/admin/BlogCompose/EditPost/${data}'" value='${data}'>
+                            return `<button type="submit" class="btn btn-info btn-sm" onclick="window.location.href='/#/${data}'" value='${data}'>
                                         <i class="fas fa-pencil-alt">
                                         </i>
                                         Edit

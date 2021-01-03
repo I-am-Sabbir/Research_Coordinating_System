@@ -25,7 +25,7 @@ namespace Research_Coordinating_System.Models.Paper
                                         dataTables.PageIndex,
                                         dataTables.PageSize,
                                         dataTables.SearchText,
-                                        dataTables.GetSortText(new string[] { "PaperTilte", "PaperCategory", "AuthorName" }));
+                                        dataTables.GetSortText(new string[] { "PaperTilte", "AuthorName" }));
             return new
             {
                 recordsTotal = data.total,
@@ -34,7 +34,7 @@ namespace Research_Coordinating_System.Models.Paper
                         select new string[]
                         {
                             record.PaperTilte,
-                            record.PaperCategory.CategoryName,
+                           
                             record.AuthorName
                         }).ToArray()
             };

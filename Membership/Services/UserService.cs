@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Membership.Services
 {
-   public class UserService : IUserService
+    public class UserService : IUserService
     {
         private readonly UserManager _userManager;
         private readonly RoleManager _roleManager;
@@ -75,36 +75,27 @@ namespace Membership.Services
         }
         public (IList<ApplicationUser> records, int total, int totalDisplay) GetAllUser(int pageIndex, int pageSize, string searchText, string sortText)
         {
-            using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled)) {
-                try
-                {
-                    var users = new List<ApplicationUser>();
-                    var columnsMap = new Dictionary<string, Expression<Func<ApplicationUser, object>>>()
-                    {
-                        ["fullName"] = x => x.FullName,
-                        ["userName"] = x => x.UserName,
-                        ["email"] = x => x.Email
-                    };
+            var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled);
+            var users = new List<ApplicationUser>();
+            var columnsMap = new Dictionary<string, Expression<Func<ApplicationUser, object>>>()
+            {
+                ["fullName"] = x => x.FullName,
+                ["userName"] = x => x.UserName,
+                ["email"] = x => x.Email
+            };
 
-                    var query = _userManager.Users.Include(u => u.UserRoles).ThenInclude(ur => ur.Role).AsQueryable();
-                    var total = query.CountAsync();
+            var query = _userManager.Users.Include(u => u.UserRoles).ThenInclude(ur => ur.Role).AsQueryable();
+            var total = query.CountAsync();
 
-                    query = query.Where(x => !x.IsDeletedRole && x.UserRoles.Any(ur => ur.Role.Name == new RoleNames().User) &&
-                        x.RoleStatus != EnumRoles.Admin &&
-                        (string.IsNullOrWhiteSpace(searchText) || x.FullName.Contains(searchText) ||
-                        x.UserName.Contains(searchText) || x.Email.Contains(searchText)));
+            query = query.Where(x => !x.IsDeletedRole && x.UserRoles.Any(ur => ur.Role.Name == new RoleNames().User) &&
+                x.RoleStatus != EnumRoles.Admin &&
+                (string.IsNullOrWhiteSpace(searchText) || x.FullName.Contains(searchText) ||
+                x.UserName.Contains(searchText) || x.Email.Contains(searchText)));
 
-                    var totalDisplay = query.CountAsync();
-                    var result = query.AsNoTracking().ToList();
-                    return (result, 0, 0);
-                }
-                catch(Exception ex)
-                {
-                    scope.Dispose();
-                    throw;
-                }
-            }
-            
+            var totalDisplay = query.CountAsync();
+            var result = query.AsNoTracking().ToList();
+            return (result, 0, 0);
+
         }
 
         public ApplicationUser GetById(Guid id)

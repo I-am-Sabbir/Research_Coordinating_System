@@ -38,7 +38,7 @@ namespace Framework.Services
             var existingPaperDetails = _frameworkUnitOfWork.PaperDetailsRepository.GetById(paperDetails.Id);
             existingPaperDetails.PaperTilte = paperDetails.PaperTilte;
             existingPaperDetails.AuthorName = paperDetails.AuthorName;
-            existingPaperDetails.Category = paperDetails.Category;
+            
             existingPaperDetails.Volume = paperDetails.Volume;
             existingPaperDetails.Page = paperDetails.Page;
             //existingPaperDetails.ResearchSeminar = paperDetails.ResearchSeminar;

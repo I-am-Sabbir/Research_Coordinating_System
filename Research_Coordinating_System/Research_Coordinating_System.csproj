@@ -36,7 +36,6 @@
     <Folder Include="Models\Collaboration\" />
     <Folder Include="Models\Task\" />
     <Folder Include="Models\Seminar\" />
-    <Folder Include="Models\Paper\" />
   </ItemGroup>
 
 </Project>

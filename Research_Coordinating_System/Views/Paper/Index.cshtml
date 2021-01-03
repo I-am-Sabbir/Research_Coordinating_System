@@ -1,0 +1,116 @@
+﻿@model Research_Coordinating_System.Models.Paper.PaperModel
+@{ 
+    Layout = "_FacultyLayout";
+}
+
+@section PageStyles
+{
+    <!-- DataTables -->
+    <link rel="stylesheet" href="/admin/plugins/datatables-bs4/css/dataTables.bootstrap4.css">
+}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">DataTable with default features</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <partial name="_ActionMessage" model="@Model.Response" />
+                        <table id="Post" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    
+                                    <th>Category</th>
+                                    
+                                    <th>Author</th>
+
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>Title</th>
+
+                                    <th>Category</th>
+
+                                    <th>Author</th>
+
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>
+
+@section PageScripts
+{
+    <!-- DataTables -->
+    <script src="/admin/plugins/datatables/jquery.dataTables.js"></script>
+    <script src="/admin/plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
+    <!-- page script -->
+    <script>
+        $(function () {
+            $('#Post').DataTable({
+                "processing": true,
+                "serverSide": true,
+                "ajax": "/Paper/GetPapers",
+                "columnDefs": [
+                    {
+
+                        "orderable": false,
+                        "targets": 3,
+                        "render": function (data, type, row) {
+                            var content = `<img src="images/${data}" width="100" />`;
+                            return content;
+                        }
+                    },
+
+                    {
+                        "orderable": false,
+                        "targets": 5,
+                        "render": function (data, type, row) {
+                            return `<button type="submit" class="btn btn-info btn-sm" onclick="window.location.href='/admin/BlogCompose/EditPost/${data}'" value='${data}'>
+                                        <i class="fas fa-pencil-alt">
+                                        </i>
+                                        Edit
+                                    </button>
+                                    <button type="submit" class="btn btn-danger btn-sm show-bs-modal" href="#" data-id='${data}' value='${data}'>
+                                        <i class="fas fa-trash">
+                                        </i>
+                                        Delete
+                                    </button>`;
+                        }
+                    }
+                ]
+            });
+
+            $('#Post').on('click', '.show-bs-modal', function (event) {
+                var id = $(this).data("id");
+                var modal = $("#modal-default");
+                modal.find('.modal-body p').text('Are you sure you want to delete this record?')
+                //$("#deleteForm").attr("action", "/admin/category/delete/" + id );
+                $("#deleteId").val(id);
+                modal.modal('show');
+            });
+
+            $("#deleteButton").click(function () {
+                $("#deleteForm").submit();
+            });
+        });
+    </script>
+}

@@ -56,7 +56,7 @@ namespace Research_Coordinating_System.Models
                     new MenuItem
                     {
                         Title = "Submit Paper",
-                        url = "Paper/Index"
+                        url = "/Paper/Index"
 
                     },
 

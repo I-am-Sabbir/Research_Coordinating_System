@@ -73,9 +73,9 @@ namespace Membership.Services
             var result = query.AsNoTracking().ToList();
             return (result, 0, 0);
         }
+
         public (IList<ApplicationUser> records, int total, int totalDisplay) GetAllUser(int pageIndex, int pageSize, string searchText, string sortText)
         {
-            var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled);
             var users = new List<ApplicationUser>();
             var columnsMap = new Dictionary<string, Expression<Func<ApplicationUser, object>>>()
             {
@@ -95,8 +95,8 @@ namespace Membership.Services
             var totalDisplay = query.CountAsync();
             var result = query.AsNoTracking().ToList();
             return (result, 0, 0);
-
         }
+
 
         public ApplicationUser GetById(Guid id)
         {

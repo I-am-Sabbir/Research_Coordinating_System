@@ -8,7 +8,6 @@ using Membership;
 using Research_Coordinating_System.Areas.Admin.Models;
 using Research_Coordinating_System.Areas.Admin.Models.AssignCoordinator;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Research_Coordinating_System.Models;

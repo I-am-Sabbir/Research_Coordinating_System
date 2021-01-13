@@ -1,4 +1,7 @@
 ﻿@model Research_Coordinating_System.Models.Paper.AddPaper
+@{
+    Layout = "_FacultyLayout";
+}
 
 <link href="~/lib/Trumbowyg-master/Trumbowyg-master/dist/ui/trumbowyg.min.css" rel="stylesheet" />
 
@@ -41,14 +44,14 @@
                             <div class="form-group">
                                 <label asp-for="AuthorName" class="col-md-2 control-label"></label>
                                 <div class="col-md-10">
-                                    <textarea id="js-editor" asp-for="AuthorName" class="form-control"> </textarea>
+                                    <input asp-for="AuthorName" class="form-control" />
                                     <span asp-validation-for="AuthorName" class="text-danger"></span>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="Category">Category</label>
-                                <select asp-for="CategoryId" asp-items="@Model.GetCategoryList()" class="form-control">
+                                <select asp-for="PaperCategoryId" asp-items="@Model.GetCategoryList()" class="form-control">
                                     <option>Please select one</option>
                                 </select>
                             </div>
@@ -56,7 +59,7 @@
                             <div class="form-group">
                                 <label asp-for="Volume" class="col-md-2 control-label"></label>
                                 <div class="col-md-10">
-                                    <textarea id="js-editor" asp-for="Volume" class="form-control"> </textarea>
+                                    <input asp-for="Volume" class="form-control" />
                                     <span asp-validation-for="Volume" class="text-danger"></span>
                                 </div>
                             </div>
@@ -64,7 +67,7 @@
                             <div class="form-group">
                                 <label asp-for="Page" class="col-md-2 control-label"></label>
                                 <div class="col-md-10">
-                                    <textarea id="js-editor" asp-for="Page" class="form-control"> </textarea>
+                                    <input asp-for="Page" class="form-control" />
                                     <span asp-validation-for="Page" class="text-danger"></span>
                                 </div>
                             </div>
@@ -72,7 +75,7 @@
                             <div class="form-group">
                                 <label asp-for="ConferenceLocation" class="col-md-2 control-label"></label>
                                 <div class="col-md-10">
-                                    <textarea id="js-editor" asp-for="ConferenceLocation" class="form-control"> </textarea>
+                                    <input asp-for="ConferenceLocation" class="form-control" />
                                     <span asp-validation-for="ConferenceLocation" class="text-danger"></span>
                                 </div>
                             </div>

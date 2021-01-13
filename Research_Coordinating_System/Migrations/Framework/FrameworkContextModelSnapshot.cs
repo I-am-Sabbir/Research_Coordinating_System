@@ -29,9 +29,6 @@ namespace Research_Coordinating_System.Migrations.Framework
                     b.Property<string>("CategoryName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("PaperDetailsId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.ToTable("PaperCategories");

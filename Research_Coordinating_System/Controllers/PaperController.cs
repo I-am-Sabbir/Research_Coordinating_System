@@ -12,7 +12,7 @@ using Research_Coordinating_System.Models;
 
 namespace Research_Coordinating_System.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class PaperController : Controller
     {
         private readonly IConfiguration _configuration;

@@ -68,7 +68,7 @@ namespace Research_Coordinating_System.Models
                     },
                     new MenuItem
                     {
-                        Title = "Notice",
+                        Title = "Notification",
                         url = "#"
 
                     }

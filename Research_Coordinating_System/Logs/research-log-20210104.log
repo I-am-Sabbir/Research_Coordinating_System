@@ -47,3 +47,5 @@ System.InvalidOperationException: This connection was used with an ambient trans
 2021-01-04 01:32:46.225 +06:00 [Information] User logged out.
 2021-01-04 01:33:00.925 +06:00 [Information] User logged in.
 2021-01-04 01:35:12.458 +06:00 [Information] Application Starting up
+2021-01-04 15:34:08.949 +06:00 [Information] Application Starting up
+2021-01-04 15:34:48.627 +06:00 [Information] User logged in.

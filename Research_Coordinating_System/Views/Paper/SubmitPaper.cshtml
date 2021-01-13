@@ -1,0 +1,108 @@
+﻿@model Research_Coordinating_System.Models.Paper.AddPaper
+
+<link href="~/lib/Trumbowyg-master/Trumbowyg-master/dist/ui/trumbowyg.min.css" rel="stylesheet" />
+
+<div class="content-wrapper">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>New Post</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item active">New Paper Details</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <section class="content">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Submit Paper Details</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <partial name="_ActionMessage" model="@Model.Response" />
+                        <form asp-area="" asp-controller="Paper" asp-action="SubmitPaper" method="post" class="form-horizontal" enctype="multipart/form-data">
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="PaperTilte" class="col-md-2 control-label"></label>
+                                <div class="col-md-10">
+                                    <input asp-for="PaperTilte" class="form-control" />
+                                    <span asp-validation-for="PaperTilte" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="AuthorName" class="col-md-2 control-label"></label>
+                                <div class="col-md-10">
+                                    <textarea id="js-editor" asp-for="AuthorName" class="form-control"> </textarea>
+                                    <span asp-validation-for="AuthorName" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Category">Category</label>
+                                <select asp-for="CategoryId" asp-items="@Model.GetCategoryList()" class="form-control">
+                                    <option>Please select one</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Volume" class="col-md-2 control-label"></label>
+                                <div class="col-md-10">
+                                    <textarea id="js-editor" asp-for="Volume" class="form-control"> </textarea>
+                                    <span asp-validation-for="Volume" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Page" class="col-md-2 control-label"></label>
+                                <div class="col-md-10">
+                                    <textarea id="js-editor" asp-for="Page" class="form-control"> </textarea>
+                                    <span asp-validation-for="Page" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="ConferenceLocation" class="col-md-2 control-label"></label>
+                                <div class="col-md-10">
+                                    <textarea id="js-editor" asp-for="ConferenceLocation" class="form-control"> </textarea>
+                                    <span asp-validation-for="ConferenceLocation" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-10">
+                                    <input type="submit" class="btn btn-default" value="Submit" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+
+</div>
+
+
+@section PageScripts
+{
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="~/lib/Trumbowyg-master/Trumbowyg-master/dist/trumbowyg.min.js"></script>
+    <script>
+        $('#js-editor').trumbowyg();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+}

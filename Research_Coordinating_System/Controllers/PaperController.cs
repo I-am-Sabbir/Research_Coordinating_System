@@ -36,5 +36,46 @@ namespace Research_Coordinating_System.Controllers
             var data = model.GetPaperDetails(tableModel);
             return Json(data);
         }
+
+        public IActionResult SubmitPaper()
+        {
+            var model = new AddPaper();
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult SubmitPaper([Bind(nameof(AddPaper.PaperTilte),
+                                            nameof(AddPaper.AuthorName),
+                                            nameof(AddPaper.PaperCategoryId),
+                                            nameof(AddPaper.Volume),
+                                            nameof(AddPaper.Page),
+                                            nameof(AddPaper.ConferenceLocation))]
+                                           AddPaper model)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    model.Add();
+                    model.Response = new ResponseModel("Blog Post Create Successful", ResponseType.Success);
+
+                    //logger code
+                    _logger.LogInformation("Blog Post Create Sucessfully");
+
+                    return RedirectToAction("Index");
+                }
+
+                catch (Exception ex)
+                {
+                    model.Response = new ResponseModel("Blog Post failued.", ResponseType.Failure);
+                    _logger.LogError($"BlogPost Create 'Failed'. Excption is : {ex.Message}");
+                }
+            }
+            return View(model);
+        }
+
+
+
     }
 }

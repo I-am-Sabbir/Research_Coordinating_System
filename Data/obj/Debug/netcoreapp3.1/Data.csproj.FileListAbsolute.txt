@@ -6,4 +6,3 @@ G:\Projects\Research_Coordinating_System\Data\obj\Debug\netcoreapp3.1\Data.Assem
 G:\Projects\Research_Coordinating_System\Data\obj\Debug\netcoreapp3.1\Data.csproj.CoreCompileInputs.cache
 G:\Projects\Research_Coordinating_System\Data\obj\Debug\netcoreapp3.1\Data.dll
 G:\Projects\Research_Coordinating_System\Data\obj\Debug\netcoreapp3.1\Data.pdb
-G:\Projects\Research_Coordinating_System\Data\obj\Debug\netcoreapp3.1\Data.csprojAssemblyReference.cache

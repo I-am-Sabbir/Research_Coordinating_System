@@ -45,6 +45,10 @@ namespace Framework
                 .WithOne(c => c.PaperDetails)
                 .HasForeignKey<ResearchCollaboration>(c => c.PaperDetailsId);
 
+            builder.Entity<PaperDetails>()
+                .HasIndex(p => p.PaperTilte)
+                .IsUnique();
+
             base.OnModelCreating(builder);
         }
 

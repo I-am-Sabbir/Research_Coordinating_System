@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Research_Coordinating_System.Migrations.Framework
 {
     [DbContext(typeof(FrameworkContext))]
-    [Migration("20210116081147_FrameworkMigration")]
+    [Migration("20210116142746_FrameworkMigration")]
     partial class FrameworkMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -56,7 +56,7 @@ namespace Research_Coordinating_System.Migrations.Framework
                         .HasColumnType("int");
 
                     b.Property<string>("PaperTilte")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("ResearchCollaborationId")
                         .HasColumnType("int");
@@ -73,6 +73,10 @@ namespace Research_Coordinating_System.Migrations.Framework
                     b.HasKey("Id");
 
                     b.HasIndex("PaperCategoryId");
+
+                    b.HasIndex("PaperTilte")
+                        .IsUnique()
+                        .HasFilter("[PaperTilte] IS NOT NULL");
 
                     b.ToTable("PaperDetails");
                 });

@@ -54,7 +54,7 @@ namespace Research_Coordinating_System.Migrations.Framework
                         .HasColumnType("int");
 
                     b.Property<string>("PaperTilte")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("ResearchCollaborationId")
                         .HasColumnType("int");
@@ -71,6 +71,10 @@ namespace Research_Coordinating_System.Migrations.Framework
                     b.HasKey("Id");
 
                     b.HasIndex("PaperCategoryId");
+
+                    b.HasIndex("PaperTilte")
+                        .IsUnique()
+                        .HasFilter("[PaperTilte] IS NOT NULL");
 
                     b.ToTable("PaperDetails");
                 });

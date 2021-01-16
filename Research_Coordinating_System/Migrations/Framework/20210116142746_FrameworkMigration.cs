@@ -117,6 +117,13 @@ namespace Research_Coordinating_System.Migrations.Framework
                 column: "PaperCategoryId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_PaperDetails_PaperTilte",
+                table: "PaperDetails",
+                column: "PaperTilte",
+                unique: true,
+                filter: "[PaperTilte] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_ResearchCollaborations_PaperDetailsId",
                 table: "ResearchCollaborations",
                 column: "PaperDetailsId",

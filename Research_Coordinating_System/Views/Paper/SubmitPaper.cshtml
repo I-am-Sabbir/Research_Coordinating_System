@@ -10,9 +10,6 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>New Post</h1>
-                </div>
-                <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item active">New Paper Details</li>
                     </ol>
@@ -77,6 +74,14 @@
                                 <div class="col-md-10">
                                     <input asp-for="ConferenceLocation" class="form-control" />
                                     <span asp-validation-for="ConferenceLocation" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Submitdate" class="col-md-2 control-label"></label>
+                                <div class="col-md-10">
+                                    <input asp-for="Submitdate" class="form-control" />
+                                    <span asp-validation-for="Submitdate" class="text-danger"></span>
                                 </div>
                             </div>
 

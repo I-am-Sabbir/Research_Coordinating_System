@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Research_Coordinating_System.Migrations.Framework
 {
     [DbContext(typeof(FrameworkContext))]
-    [Migration("20210113160909_FrameworkMigration")]
+    [Migration("20210116081147_FrameworkMigration")]
     partial class FrameworkMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -63,6 +63,9 @@ namespace Research_Coordinating_System.Migrations.Framework
 
                     b.Property<int>("ResearchSeminarId")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("Submitdate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Volume")
                         .HasColumnType("nvarchar(max)");

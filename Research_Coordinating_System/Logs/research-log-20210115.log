@@ -1,0 +1,24 @@
+2021-01-15 19:22:04.475 +06:00 [Information] Application Starting up
+2021-01-15 19:22:26.190 +06:00 [Information] User logged in.
+2021-01-15 19:25:59.131 +06:00 [Information] Application Starting up
+2021-01-15 19:26:16.441 +06:00 [Information] User logged in.
+2021-01-15 19:33:02.600 +06:00 [Information] Application Starting up
+2021-01-15 19:33:22.284 +06:00 [Information] User logged in.
+2021-01-15 19:34:05.809 +06:00 [Error] An exception occurred while iterating over the results of a query for context type '"Membership.Contexts.ApplicationDbContext"'."
+""System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()"
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2021-01-15 19:34:09.387 +06:00 [Error] An exception occurred while iterating over the results of a query for context type '"Membership.Contexts.ApplicationDbContext"'."
+""System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()"
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+2021-01-15 19:42:55.603 +06:00 [Information] Application Starting up
+2021-01-15 19:45:53.494 +06:00 [Information] User logged in.
+2021-01-15 20:05:52.614 +06:00 [Information] Application Starting up
+2021-01-15 20:06:07.452 +06:00 [Information] User logged in.

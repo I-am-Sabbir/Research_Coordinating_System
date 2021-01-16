@@ -15,6 +15,8 @@ namespace Framework.Entities
         public string Page { get; set; }
         public string ConferenceLocation { get; set; }
 
+        public DateTime Submitdate { get; set; }
+
         public int PaperCategoryId { get; set; }
         public PaperCategory PaperCategory { get; set; }
 

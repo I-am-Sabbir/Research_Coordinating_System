@@ -62,6 +62,9 @@ namespace Research_Coordinating_System.Migrations.Framework
                     b.Property<int>("ResearchSeminarId")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("Submitdate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Volume")
                         .HasColumnType("nvarchar(max)");
 

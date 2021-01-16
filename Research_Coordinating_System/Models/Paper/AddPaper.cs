@@ -14,7 +14,7 @@ namespace Research_Coordinating_System.Models.Paper
     public class AddPaper : PaperBaseModel
     {
         [Required]
-        [StringLength (500, MinimumLength = 5)]
+        [StringLength(500, MinimumLength = 5)]
         [Display(Name = "Title")]
         public string PaperTilte { get; set; }
 
@@ -27,6 +27,9 @@ namespace Research_Coordinating_System.Models.Paper
         public string Volume { get; set; }
         public string Page { get; set; }
         public string ConferenceLocation { get; set; }
+
+        [Required]
+        public DateTime Submitdate { get; set; }
 
         public AddPaper(IPaperDetailsService paperDetailsService) : base(paperDetailsService)
         {

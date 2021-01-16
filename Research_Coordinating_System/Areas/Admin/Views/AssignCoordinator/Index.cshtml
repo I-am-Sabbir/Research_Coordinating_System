@@ -44,7 +44,7 @@
                             <thead>
                                 <tr>
                                     <th>Email</th>
-                                    <th>Name</th>
+                                    
                                     <th>Action</th>
 
                                 </tr>
@@ -52,7 +52,7 @@
                             <tfoot>
                                 <tr>
                                     <th>Email</th>
-                                    <th>Name</th>
+                                    
                                     <th>Action</th>
 
                                 </tr>
@@ -85,7 +85,7 @@
                 "columnDefs": [
                     {
                         "orderable": false,
-                        "targets": 2,
+                        "targets": 1,
                         "render": function (data, type, row) {
                             return `<button type="submit" class="btn btn-info btn-sm" onclick="window.location.href='/admin/Category/EditCategory/${data}'" value='${data}'>
                                         <i class="fas fa-pencil-alt">

@@ -12,7 +12,7 @@ using Research_Coordinating_System.Models;
 
 namespace Research_Coordinating_System.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class PaperController : Controller
     {
         private readonly IConfiguration _configuration;
@@ -58,18 +58,18 @@ namespace Research_Coordinating_System.Controllers
                 try
                 {
                     model.Add();
-                    model.Response = new ResponseModel("Blog Post Create Successful", ResponseType.Success);
+                    model.Response = new ResponseModel("Paper Details Added", ResponseType.Success);
 
                     //logger code
-                    _logger.LogInformation("Blog Post Create Sucessfully");
+                    _logger.LogInformation("Paper Added Sucessfully");
 
                     return RedirectToAction("Index");
                 }
 
                 catch (Exception ex)
                 {
-                    model.Response = new ResponseModel("Blog Post failued.", ResponseType.Failure);
-                    _logger.LogError($"BlogPost Create 'Failed'. Excption is : {ex.Message}");
+                    model.Response = new ResponseModel("Paper Additon failed.", ResponseType.Failure);
+                    _logger.LogError($"Paper Addition 'Failed'. Excption is : {ex.Message}");
                 }
             }
             return View(model);

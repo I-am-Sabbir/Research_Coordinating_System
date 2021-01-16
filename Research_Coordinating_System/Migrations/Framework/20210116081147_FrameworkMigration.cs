@@ -48,6 +48,7 @@ namespace Research_Coordinating_System.Migrations.Framework
                     Volume = table.Column<string>(nullable: true),
                     Page = table.Column<string>(nullable: true),
                     ConferenceLocation = table.Column<string>(nullable: true),
+                    Submitdate = table.Column<DateTime>(nullable: false),
                     PaperCategoryId = table.Column<int>(nullable: false),
                     ResearchSeminarId = table.Column<int>(nullable: true),
                     ResearchCollaborationId = table.Column<int>(nullable: true)

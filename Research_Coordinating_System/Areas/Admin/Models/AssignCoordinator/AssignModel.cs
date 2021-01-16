@@ -19,7 +19,7 @@ namespace Research_Coordinating_System.Areas.Admin.Models.AssignCoordinator
                                     dataTables.PageIndex,
                                     dataTables.PageSize,
                                     dataTables.SearchText,
-                                    dataTables.GetSortText(new string[] { "Email", "FullName" }));
+                                    dataTables.GetSortText(new string[] { "Email" }));
             return new
             {
                 rerecordsTotal = data.total,

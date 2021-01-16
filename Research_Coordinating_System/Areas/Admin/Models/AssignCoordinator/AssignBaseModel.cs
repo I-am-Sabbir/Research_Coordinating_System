@@ -18,7 +18,7 @@ namespace Research_Coordinating_System.Areas.Admin.Models.AssignCoordinator
 
         public AssignBaseModel()
         {
-            _userService = Startup.AutofacContainer.Resolve<UserService>();
+            _userService = Startup.AutofacContainer.Resolve<IUserService>();
         }
     }
 }

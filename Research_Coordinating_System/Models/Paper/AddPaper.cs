@@ -68,7 +68,8 @@ namespace Research_Coordinating_System.Models.Paper
                 PaperCategoryId = this.PaperCategoryId,
                 Volume = this.Volume,
                 Page = this.Page,
-                ConferenceLocation = this.ConferenceLocation
+                ConferenceLocation = this.ConferenceLocation,
+                Submitdate = this.Submitdate
             };
             _paperDetailsService.CreatePaperDetails(PaperDetails);
 

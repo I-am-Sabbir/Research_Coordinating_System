@@ -50,7 +50,8 @@ namespace Research_Coordinating_System.Controllers
                                             nameof(AddPaper.PaperCategoryId),
                                             nameof(AddPaper.Volume),
                                             nameof(AddPaper.Page),
-                                            nameof(AddPaper.ConferenceLocation))]
+                                            nameof(AddPaper.ConferenceLocation),
+                                            nameof(AddPaper.Submitdate))]
                                            AddPaper model)
         {
             if (ModelState.IsValid)

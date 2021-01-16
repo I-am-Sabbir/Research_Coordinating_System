@@ -70,7 +70,7 @@ namespace Research_Coordinating_System.Areas.Coordinator.Models
                     new MenuItem
                     {
                         Title = "View Paper Report",
-                        url = "/Coordinator/CoordinatorDashboard/Report"
+                        url = "/Coordinator/Report/Index"
 
                     }
 

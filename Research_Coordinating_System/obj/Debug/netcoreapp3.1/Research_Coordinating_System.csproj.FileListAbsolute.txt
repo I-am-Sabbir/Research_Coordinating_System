@@ -127,7 +127,6 @@ G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Areas\Coordinator\Views\CoordinatorDashboard\Index.cshtml.g.cs
-G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Areas\Coordinator\Views\CoordinatorDashboard\Report.cshtml.g.cs
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Areas\Coordinator\Views\Shared\_CoordinatorLayout.cshtml.g.cs
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Areas\Coordinator\Views\Shared\_LeftMenu.cshtml.g.cs
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Areas\Coordinator\Views\_ViewImports.cshtml.g.cs
@@ -219,3 +218,4 @@ G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Views\Paper\Index.cshtml.g.cs
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Views\Paper\SubmitPaper.cshtml.g.cs
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Research_Coordinating_System.MvcApplicationPartsAssemblyInfo.cs
+G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Areas\Coordinator\Views\Report\Index.cshtml.g.cs

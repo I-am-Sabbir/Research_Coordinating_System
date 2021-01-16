@@ -10,13 +10,12 @@ namespace Research_Coordinating_System.Areas.Coordinator.Controllers
 {
     [Area("Coordinator")]
     [Authorize(Roles = "Coordinator")]
-    public class CoordinatorDashboardController : Controller
+    public class ReportController : Controller
     {
         public IActionResult Index()
         {
-            var model = new CoordinatorDashBoardModel();
+            var model = new ReportModel();
             return View(model);
-
         }
     }
 }

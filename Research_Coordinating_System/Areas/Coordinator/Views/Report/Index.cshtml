@@ -1,46 +1,52 @@
-﻿
+﻿@model Research_Coordinating_System.Areas.Coordinator.Models.ReportModel
 @{
-    ViewData["Title"] = "Report";
+    ViewData["Title"] = "Index";
     Layout = "~/Areas/Coordinator/Views/Shared/_CoordinatorLayout.cshtml";
 }
 
-<div class="content-wrapper">
+<link href="~/lib/Trumbowyg-master/Trumbowyg-master/dist/ui/trumbowyg.min.css" rel="stylesheet" />
 
+<div class="content-wrapper">
+    <h1>New Report View</h1>
     <div class="text-center">
         <img class="img-responsive" src="~/img/diuLogo.png" alt="Chania" width="70">
         <h4>DAFFODIL INTERNATIONAL UNIVERSITY DIVISION OF RESEARCH</h4>
     </div>
 
     <div class="d-flex justify-content-center">
-        <form class="w-50">
+        <partial name="_ActionMessage" model="@Model.Response" />
+        <form asp-area="Coordinator" asp-controller="Report" asp-action="Index" method="post" class="w-50">
+            <div asp-validation-summary="All" class="text-danger"></div>
             <!-- 2 column grid layout for inline styling -->
             <div class="row mb-4">
                 <div class="col d-flex justify-content-center">
-                    <label class="form-label" for="form1Example2">Department</label>
+                    <label asp-for="Department" class="form-label"></label>
 
                 </div>
 
                 <div class="col">
                     <!-- Simple link -->
-                    <input type="email" id="form1Example1" class="form-control" />
+                    <input asp-for="Department" class="form-control" />
+                    <span asp-validation-for="Department" class="text-danger"></span>
                 </div>
             </div>
 
             <div class="row mb-4">
                 <div class="col d-flex justify-content-center">
-                    <label class="form-label" for="form1Example2">Date</label>
+                    <label asp-for="Date" class="form-label"></label>
 
                 </div>
 
                 <div class="col">
                     <!-- Simple link -->
-                    <input type="email" id="form1Example1" class="form-control" />
+                    <input asp-for="Date" class="form-control" />
+                    <span asp-validation-for="Date" class="text-danger"></span>
                 </div>
             </div>
 
             <div class="row mb-4">
                 <div class="col d-flex justify-content-center">
-                    <label class="form-label" for="form1Example2">Quarter</label>
+                    <label class="form-label" asp-for="Quarter"></label>
 
                 </div>
 
@@ -54,26 +60,39 @@
                             <option value="">First Quarter (September - December)</option>
                         </select>
                     </div>
+                    <span asp-validation-for="Quarter" class="text-danger"></span>
                 </div>
             </div>
 
             <div class="row mb-4">
                 <div class="col d-flex justify-content-center">
-                    <label class="form-label" for="form1Example2">Name & Designation of Coordinator </label>
+                    <label class="form-label" asp-for="NameAndDesignation"></label>
 
                 </div>
 
                 <div class="col">
                     <!-- Simple link -->
-                    <input type="email" id="form1Example1" class="form-control" />
+                    <input asp-for="NameAndDesignation" class="form-control" />
+
+                    <span asp-validation-for="NameAndDesignation" class="text-danger"></span>
                 </div>
             </div>
 
             <!-- Submit button -->
             <div class="row mb-4 d-flex justify-content-center">
-                <button type="submit" class="btn btn-primary btn-block w-25">Submit</button>
+                <input type="submit" class="btn btn-success" value="Submit" />
             </div>
         </form>
     </div>
 </div>
 
+@section PageScripts
+{
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="~/lib/Trumbowyg-master/Trumbowyg-master/dist/trumbowyg.min.js"></script>
+    <script>
+        $('#js-editor').trumbowyg();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+}

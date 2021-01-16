@@ -17,5 +17,15 @@ namespace Research_Coordinating_System.Areas.Coordinator.Controllers
             var model = new ReportModel();
             return View(model);
         }
+
+        [HttpPost]
+        public IActionResult Index([Bind(nameof(ReportModel.Department),
+                                         nameof(ReportModel.Date),
+                                         nameof(ReportModel.Quarter),
+                                         nameof(ReportModel.NameAndDesignation))]
+                                         ReportModel model)
+        {
+            return View();
+        }
     }
 }

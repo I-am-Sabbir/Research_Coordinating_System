@@ -15,7 +15,7 @@ namespace Research_Coordinating_System.Areas.Admin.Models.AssignCoordinator
 
         internal object GetUsers(DataTablesAjaxRequestModel dataTables)
         {
-            var data = _userService.GetAllUser(
+            var data = _userService.GetAllMembersAsync(
                                     dataTables.PageIndex,
                                     dataTables.PageSize,
                                     dataTables.SearchText,
@@ -23,12 +23,13 @@ namespace Research_Coordinating_System.Areas.Admin.Models.AssignCoordinator
             return new
             {
                 rerecordsTotal = data.total,
-                recordsFiltered = data.totalDisplay,
+                recordsFiltered = data.totalFiltered,
                 data = (from record in data.records
                         select new string[]
                         {
-                                record.Email,
-                                record.FullName
+                                record.Email
+                                
+                      
                         }
                    ).ToArray()
 

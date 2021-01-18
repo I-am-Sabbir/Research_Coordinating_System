@@ -17,15 +17,19 @@ namespace Membership.Services
         private readonly UserManager _userManager;
         private readonly RoleManager _roleManager;
         private readonly ICurrentUserService _currentUserService;
+        private IMembershipUnitOfWork _membershipUnitOfWork;
+
 
         public UserService(
             UserManager userManager,
             RoleManager roleManager,
+            IMembershipUnitOfWork membershipUnitOfWork,
             ICurrentUserService currentUserService
             )
         {
             _userManager = userManager;
             _roleManager = roleManager;
+            _membershipUnitOfWork = membershipUnitOfWork;
             _currentUserService = currentUserService;
         }
 
@@ -74,29 +78,35 @@ namespace Membership.Services
             return (result, 0, 0);
         }
 
-        public (IList<ApplicationUser> records, int total, int totalDisplay) GetAllUser(int pageIndex, int pageSize, string searchText, string sortText)
+        //public (IList<ApplicationUser> records, int total, int totalDisplay) GetAllUser(int pageIndex, int pageSize, string searchText, string sortText)
+        //{
+        //    var users = new List<ApplicationUser>();
+        //    var columnsMap = new Dictionary<string, Expression<Func<ApplicationUser, object>>>()
+        //    {
+        //        ["fullName"] = x => x.FullName,
+        //        ["userName"] = x => x.UserName,
+        //        ["email"] = x => x.Email
+        //    };
+
+        //    var query = _userManager.Users.Include(u => u.UserRoles).ThenInclude(ur => ur.Role).AsQueryable();
+        //    var total = query.CountAsync();
+
+        //    query = query.Where(x => !x.IsDeletedRole && x.UserRoles.Any(ur => ur.Role.Name == new RoleNames().User) &&
+        //        x.RoleStatus != EnumRoles.Admin &&
+        //        (string.IsNullOrWhiteSpace(searchText) || x.FullName.Contains(searchText) ||
+        //        x.UserName.Contains(searchText) || x.Email.Contains(searchText)));
+
+        //    var totalDisplay = query.CountAsync();
+        //    var result = query.AsNoTracking().ToList();
+        //    return (result, 0, 0);
+        //}
+
+        public (IList<ApplicationUser> records, int total, int totalFiltered) GetAllMembersAsync(int pageIndex, int pageSize, string searchText, string sortText)
         {
-            var users = new List<ApplicationUser>();
-            var columnsMap = new Dictionary<string, Expression<Func<ApplicationUser, object>>>()
-            {
-                ["fullName"] = x => x.FullName,
-                ["userName"] = x => x.UserName,
-                ["email"] = x => x.Email
-            };
-
-            var query = _userManager.Users.Include(u => u.UserRoles).ThenInclude(ur => ur.Role).AsQueryable();
-            var total = query.CountAsync();
-
-            query = query.Where(x => !x.IsDeletedRole && x.UserRoles.Any(ur => ur.Role.Name == new RoleNames().User) &&
-                x.RoleStatus != EnumRoles.Admin &&
-                (string.IsNullOrWhiteSpace(searchText) || x.FullName.Contains(searchText) ||
-                x.UserName.Contains(searchText) || x.Email.Contains(searchText)));
-
-            var totalDisplay = query.CountAsync();
-            var result = query.AsNoTracking().ToList();
+            //var result = _membershipUnitOfWork.MembershipRepository.GetAll().ToList();
+            var result = _membershipUnitOfWork.MembershipRepository.GetAll().ToList();
             return (result, 0, 0);
         }
-
 
         public ApplicationUser GetById(Guid id)
         {

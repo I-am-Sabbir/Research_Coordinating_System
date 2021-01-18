@@ -25,6 +25,7 @@ namespace Research_Coordinating_System.Areas.Coordinator.Controllers
                                          nameof(ReportModel.NameAndDesignation))]
                                          ReportModel model)
         {
+
             return View();
         }
     }

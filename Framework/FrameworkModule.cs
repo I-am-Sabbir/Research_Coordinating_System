@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Framework.Repositories;
 using Framework.Services;
+using Membership;
 using Membership.Contexts;
 using Membership.Data;
 using Membership.Services;
@@ -35,6 +36,8 @@ namespace Framework
             builder.RegisterType<FrameworkUnitOfWork>().As<IFrameworkUnitOfWork>()
                 .InstancePerLifetimeScope();
 
+            builder.RegisterType<MembershipUnitOfWork>().As<IMembershipUnitOfWork>()
+                .InstancePerLifetimeScope();
             
             builder.RegisterType<AccountSeed>()
                 .InstancePerLifetimeScope();
@@ -59,6 +62,9 @@ namespace Framework
                 .InstancePerLifetimeScope();
 
             builder.RegisterType<TaskRepository>().As<ITaskRepository>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<MembershipRepository>().As<IMembershipRepository>()
                 .InstancePerLifetimeScope();
 
             //Services

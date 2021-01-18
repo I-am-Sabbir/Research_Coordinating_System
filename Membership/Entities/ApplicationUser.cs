@@ -1,4 +1,5 @@
-﻿using Membership.Data;
+﻿using Data;
+using Membership.Data;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Membership.Entities
 {
-    public class ApplicationUser : IdentityUser<Guid>
+    public class ApplicationUser : IdentityUser<Guid>, IEntity<Guid>
     {
         public string ImageUrl { get; set; }
         public bool Status { get; set; }
@@ -28,6 +29,7 @@ namespace Membership.Entities
             this.IsDeletedRole = false;
             this.IsBlockedRole = false;
             this.UserRoles = new List<ApplicationUserRole>();
+
         }
 
         internal ApplicationUser(string userName)

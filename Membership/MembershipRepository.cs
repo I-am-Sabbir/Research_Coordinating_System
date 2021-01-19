@@ -15,9 +15,6 @@ namespace Membership
 
         }
 
-        //public Task<(IEnumerable<ApplicationUser> data, int total, int totalFiltered)> GetAllUsersAsync(int pageIndex, int pageSize, string searchText, string sortText)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        
     }
 }

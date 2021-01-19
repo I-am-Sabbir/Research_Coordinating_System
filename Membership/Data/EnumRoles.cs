@@ -7,6 +7,7 @@ namespace Membership.Data
     public enum EnumRoles
     {
         Admin = 1,
-        User = 2,
+        Coordinator = 2,
+        Faculty = 3,
     }
 }

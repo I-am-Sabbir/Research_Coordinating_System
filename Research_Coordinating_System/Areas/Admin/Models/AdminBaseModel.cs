@@ -56,8 +56,8 @@ namespace Research_Coordinating_System.Areas.Admin.Models
                     new MenuItem
                     {
                         Title = "Register Faculty",
-                        url = "#"
-                        
+                        url = "/Identities/Registration/Registration"
+
                     },
 
                     new MenuItem

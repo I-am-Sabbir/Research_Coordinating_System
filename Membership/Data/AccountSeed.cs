@@ -16,8 +16,8 @@ namespace Membership.Data
         private readonly UserManager _userManager;
         private readonly RoleManager _roleManager;
 
-        private readonly ApplicationUser _AdminUser, _CoordinatorUser;
-        private readonly Role _AdminRole, _CoordinatorRole;
+        private readonly ApplicationUser _AdminUser, _CoordinatorUser, _FacultyUser;
+        private readonly Role _AdminRole, _CoordinatorRole, _FacultyRole;
 
         public AccountSeed(UserManager userManager, RoleManager roleManager, ApplicationDbContext context)
             : base(context)
@@ -27,11 +27,11 @@ namespace Membership.Data
 
             _AdminUser = new ApplicationUser("xdxsabbir@gmail.com", "Sabbir Ahammed", "01681561869", "xdxsabbir@gmail.com");
             _CoordinatorUser = new ApplicationUser("sabbir35-1979@gmail.com", "Sabbir", "01303062901", "sabbir35-1979@gmail.com");
-
+            _FacultyUser = new ApplicationUser("sabbir@gmail.com", "Sabbir", "01681561869", "sabbir@gmai.com");
 
             _AdminRole = new Role("Admin");
             _CoordinatorRole = new Role("Coordinator");
-
+            _FacultyRole = new Role("Faculty");
         }
 
         private async Task<bool> CheckAndCreateRoleAsync(Role role)
@@ -67,6 +67,18 @@ namespace Membership.Data
                     if (await CheckAndCreateRoleAsync(_CoordinatorRole))
                     {
                         await _userManager.AddToRoleAsync(_CoordinatorUser, _CoordinatorRole.Name);
+                    }
+                }
+            }
+
+            if ((await _userManager.FindByNameAsync(_FacultyUser.UserName.ToUpper())) == null)
+            {
+                result = await _userManager.CreateAsync(_FacultyUser, "zxc123!@#");
+                if (result.Succeeded)
+                {
+                    if (await CheckAndCreateRoleAsync(_FacultyRole))
+                    {
+                        await _userManager.AddToRoleAsync(_FacultyUser, _FacultyRole.Name);
                     }
                 }
             }

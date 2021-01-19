@@ -7,10 +7,9 @@ using Microsoft.AspNetCore.Identity;
 namespace Membership.Entities
 {
     public class ApplicationUserRole
-     : IdentityUserRole<Guid> , IEntity<Guid>
+     : IdentityUserRole<Guid>
     {
         public ApplicationUser User { get; set; }
         public Role Role { get; set; }
-        public Guid Id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }
 }

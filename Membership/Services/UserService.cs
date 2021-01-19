@@ -103,7 +103,6 @@ namespace Membership.Services
 
         public (IList<ApplicationUser> records, int total, int totalFiltered) GetAllMembersAsync(int pageIndex, int pageSize, string searchText, string sortText)
         {
-            //var result = _membershipUnitOfWork.MembershipRepository.GetAll().ToList();
             var result = _membershipUnitOfWork.MembershipRepository.GetAll().ToList();
             return (result, 0, 0);
         }
@@ -127,7 +126,7 @@ namespace Membership.Services
             {
                 try
                 {
-                    entity.RoleStatus = EnumRoles.User;
+                    entity.RoleStatus = EnumRoles.Faculty;
                     entity.CreationTime = DateTime.Now;
                     entity.CreatedBy = _currentUserService.UserId;
 
@@ -166,7 +165,7 @@ namespace Membership.Services
             {
                 try
                 {
-                    entity.RoleStatus = EnumRoles.User;
+                    entity.RoleStatus = EnumRoles.Faculty;
                     entity.CreationTime = DateTime.Now;
                     entity.CreatedBy = _currentUserService.UserId;
 

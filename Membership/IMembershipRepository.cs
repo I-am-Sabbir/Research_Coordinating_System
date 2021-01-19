@@ -10,9 +10,6 @@ namespace Membership
 {
     public interface IMembershipRepository : IRepository<ApplicationUser, Guid, ApplicationDbContext>
     {
-        //Task<ApplicationUser> GetMemberInfoAsync(string email);
-        //Task UpdateMemberInfoAsync(ApplicationUser memberData, Guid memberId);
-        //Task<(IEnumerable<ApplicationUser> data, int total, int totalFiltered)> GetAllUsersAsync(int pageIndex, int pageSize, string searchText, string sortText);
-
+        
     }
 }

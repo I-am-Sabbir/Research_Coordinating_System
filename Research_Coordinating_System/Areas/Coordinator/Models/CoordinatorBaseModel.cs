@@ -56,7 +56,7 @@ namespace Research_Coordinating_System.Areas.Coordinator.Models
                     new MenuItem
                     {
                         Title = "Register Faculty",
-                        url = ""
+                        url = "/Identities/Registration/Registration"
 
                     },
 

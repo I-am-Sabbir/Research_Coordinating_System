@@ -19,16 +19,16 @@ namespace Research_Coordinating_System.Areas.Identities.Controllers
 {
     [Area("Identities")]
     [Authorize(Roles = "Admin,Coordinator")]
-    public class RegisterController : Controller
+    public class RegistrationController : Controller
     {
 
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly UserManager<ApplicationUser> _userManager;
-        private readonly ILogger<RegisterModel> _logger;
+        private readonly ILogger<RegistrartionModel> _logger;
 
-        public RegisterController(ApplicationDbContext db, UserManager<ApplicationUser> userManager,
+        public RegistrationController(ApplicationDbContext db, UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
-            ILogger<RegisterModel> logger)
+            ILogger<RegistrartionModel> logger)
         {
 
             _userManager = userManager;
@@ -43,14 +43,14 @@ namespace Research_Coordinating_System.Areas.Identities.Controllers
 
         public async Task<IActionResult> Registration()
         {
-            var model = new RegisterModel();
+            var model = new RegistrartionModel();
             //ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             return View(model);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Registration(RegisterModel Input, string returnUrl = null)
+        public async Task<IActionResult> Registration(RegistrartionModel Input, string returnUrl = null)
         {
 
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
@@ -65,7 +65,7 @@ namespace Research_Coordinating_System.Areas.Identities.Controllers
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
-                   // await _userManager.AddToRoleAsync(user, "Administrator");
+                    await _userManager.AddToRoleAsync(user, "Faculty");
                     //await _userManager.RemoveFromRoleAsync(user, "Administrator");
                     _logger.LogInformation("User created a new account with password. Name: {0}", user.UserName);
 

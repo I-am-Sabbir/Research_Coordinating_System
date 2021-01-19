@@ -8,6 +8,6 @@ namespace Membership.Data
     {
         public string Admin => "Admin";
         public string Coordinator => "Coordinator";
-        public string User => "User";
+        public string Faculty => "Faculty";
     }
 }

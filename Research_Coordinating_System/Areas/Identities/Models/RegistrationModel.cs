@@ -8,22 +8,18 @@ using System.Threading.Tasks;
 
 namespace Research_Coordinating_System.Areas.Identities.Models
 {
-    public class RegisterModel
+    public class RegistrartionModel
     {
         private readonly UserManager<ApplicationUser> _userManager;
 
-        public RegisterModel()
+        public RegistrartionModel()
         {
         }
 
-        public RegisterModel(UserManager<ApplicationUser> userManager)
+        public RegistrartionModel(UserManager<ApplicationUser> userManager)
         {
             _userManager = userManager;
         }
-
-        [Required]
-        [Display(Name = "Name")]
-        public string UserName { get; set; }
 
         [Required]
         [EmailAddress]

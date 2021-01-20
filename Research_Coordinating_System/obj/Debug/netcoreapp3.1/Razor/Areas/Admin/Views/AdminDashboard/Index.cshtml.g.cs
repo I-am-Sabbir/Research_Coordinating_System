@@ -14,13 +14,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 1 "G:\Projects\Research_Coordinating_System\Research_Coordinating_System\Areas\Admin\Views\_ViewImports.cshtml"
+using Research_Coordinating_System;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "G:\Projects\Research_Coordinating_System\Research_Coordinating_System\Areas\Admin\Views\_ViewImports.cshtml"
 using Research_Coordinating_System.Areas.Admin.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d971e3753cd3919350bc82ea0215c44e0a3cd0eb", @"/Areas/Admin/Views/AdminDashboard/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d57af8aa68a553b5c149486008f2ac009fee5d73", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"34c6a178499b4acfb8f7536c51862a00aecab6fe", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     public class Areas_Admin_Views_AdminDashboard_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Research_Coordinating_System.Areas.Admin.Models.AdminDashBoardModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Index", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -67,7 +74,7 @@ using Research_Coordinating_System.Areas.Admin.Models;
 #line hidden
 #nullable disable
             WriteLiteral(" |\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d971e3753cd3919350bc82ea0215c44e0a3cd0eb4307", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d971e3753cd3919350bc82ea0215c44e0a3cd0eb4532", async() => {
                 WriteLiteral("Back to List");
             }
             );

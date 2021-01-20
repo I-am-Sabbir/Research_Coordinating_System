@@ -98,3 +98,9 @@ System.InvalidOperationException: Role FACULTY does not exist.
 2021-01-19 15:09:22.724 +06:00 [Information] User created a new account with password. Name: "murad@gmail.com"
 2021-01-19 15:26:46.976 +06:00 [Information] Application Starting up
 2021-01-19 15:27:18.328 +06:00 [Information] User logged in.
+2021-01-19 15:32:43.853 +06:00 [Information] Application Starting up
+2021-01-19 15:32:57.662 +06:00 [Information] User logged in.
+2021-01-19 15:33:33.538 +06:00 [Information] User logged out.
+2021-01-19 15:33:47.930 +06:00 [Information] User logged in.
+2021-01-19 15:35:08.509 +06:00 [Information] User created a new account with password. Name: "rana@gmail.com"
+2021-01-19 15:35:33.158 +06:00 [Information] User logged in.

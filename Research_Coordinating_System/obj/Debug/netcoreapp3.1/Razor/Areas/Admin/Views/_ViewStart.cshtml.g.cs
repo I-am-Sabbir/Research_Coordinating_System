@@ -14,13 +14,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 1 "G:\Projects\Research_Coordinating_System\Research_Coordinating_System\Areas\Admin\Views\_ViewImports.cshtml"
+using Research_Coordinating_System;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "G:\Projects\Research_Coordinating_System\Research_Coordinating_System\Areas\Admin\Views\_ViewImports.cshtml"
 using Research_Coordinating_System.Areas.Admin.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2d47ab5c93609c2e85a602b37aa9393d9e3d1829", @"/Areas/Admin/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d57af8aa68a553b5c149486008f2ac009fee5d73", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"34c6a178499b4acfb8f7536c51862a00aecab6fe", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     public class Areas_Admin_Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

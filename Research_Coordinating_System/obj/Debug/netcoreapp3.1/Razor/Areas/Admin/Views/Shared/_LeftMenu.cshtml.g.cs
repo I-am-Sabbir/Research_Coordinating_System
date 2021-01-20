@@ -14,13 +14,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 1 "G:\Projects\Research_Coordinating_System\Research_Coordinating_System\Areas\Admin\Views\_ViewImports.cshtml"
+using Research_Coordinating_System;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "G:\Projects\Research_Coordinating_System\Research_Coordinating_System\Areas\Admin\Views\_ViewImports.cshtml"
 using Research_Coordinating_System.Areas.Admin.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"59178f4a15e0a74c753d183b8b2ad3d4bffd4347", @"/Areas/Admin/Views/Shared/_LeftMenu.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d57af8aa68a553b5c149486008f2ac009fee5d73", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"34c6a178499b4acfb8f7536c51862a00aecab6fe", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     public class Areas_Admin_Views_Shared__LeftMenu : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Research_Coordinating_System.Models.MenuModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("src", new global::Microsoft.AspNetCore.Html.HtmlString("~/Admin/img/AdminLTELogo.png"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -55,7 +62,7 @@ using Research_Coordinating_System.Areas.Admin.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("\n<aside class=\"main-sidebar sidebar-dark-primary elevation-4\">\n    <!-- Brand Logo -->\n    <a href=\"index3.html\" class=\"brand-link\">\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "59178f4a15e0a74c753d183b8b2ad3d4bffd43475788", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "59178f4a15e0a74c753d183b8b2ad3d4bffd43476013", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -81,7 +88,7 @@ using Research_Coordinating_System.Areas.Admin.Models;
         <div class=""user-panel mt-3 pb-3 mb-3 d-flex"">
             <div class=""image"">
                 ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "59178f4a15e0a74c753d183b8b2ad3d4bffd43477358", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "59178f4a15e0a74c753d183b8b2ad3d4bffd43477583", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

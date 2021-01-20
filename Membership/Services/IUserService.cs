@@ -16,8 +16,9 @@ namespace Membership.Services
         public ApplicationUser GetById(Guid id);
         public Task<Guid> Add(ApplicationUser user, Guid userRoleId, string password);
         public Task<Guid> Add(ApplicationUser user, string userRoleName, string password);
-        public Task<Guid> Update(ApplicationUser user, Guid userRoleId);
+        public Task<Guid> Update(ApplicationUser user, string roleName);
         public Task<Guid> Update(ApplicationUser user);
         public Task<bool> ChangePassword(Guid id, string currentPassword, string newPassword);
+
     }
 }

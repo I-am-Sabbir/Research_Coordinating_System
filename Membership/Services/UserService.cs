@@ -78,28 +78,6 @@ namespace Membership.Services
             return (result, 0, 0);
         }
 
-        //public (IList<ApplicationUser> records, int total, int totalDisplay) GetAllUser(int pageIndex, int pageSize, string searchText, string sortText)
-        //{
-        //    var users = new List<ApplicationUser>();
-        //    var columnsMap = new Dictionary<string, Expression<Func<ApplicationUser, object>>>()
-        //    {
-        //        ["fullName"] = x => x.FullName,
-        //        ["userName"] = x => x.UserName,
-        //        ["email"] = x => x.Email
-        //    };
-
-        //    var query = _userManager.Users.Include(u => u.UserRoles).ThenInclude(ur => ur.Role).AsQueryable();
-        //    var total = query.CountAsync();
-
-        //    query = query.Where(x => !x.IsDeletedRole && x.UserRoles.Any(ur => ur.Role.Name == new RoleNames().User) &&
-        //        x.RoleStatus != EnumRoles.Admin &&
-        //        (string.IsNullOrWhiteSpace(searchText) || x.FullName.Contains(searchText) ||
-        //        x.UserName.Contains(searchText) || x.Email.Contains(searchText)));
-
-        //    var totalDisplay = query.CountAsync();
-        //    var result = query.AsNoTracking().ToList();
-        //    return (result, 0, 0);
-        //}
 
         public (IList<ApplicationUser> records, int total, int totalFiltered) GetAllMembersAsync(int pageIndex, int pageSize, string searchText, string sortText)
         {
@@ -109,16 +87,18 @@ namespace Membership.Services
 
         public ApplicationUser GetById(Guid id)
         {
-            var query = _userManager.Users.Include(u => u.UserRoles).ThenInclude(ur => ur.Role).AsQueryable();
+            //var query = _userManager.Users.Include(u => u.UserRoles).ThenInclude(ur => ur.Role).AsQueryable();
 
-            var user = query.FirstOrDefault(u => u.Id == id);
+            //var user = query.FirstOrDefault(u => u.Id == id);
 
-            if (user == null)
-            {
-                throw new Exception(nameof(ApplicationUser));
-            }
+            //if (user == null)
+            //{
+            //    throw new Exception(nameof(ApplicationUser));
+            //}
 
-            return user;
+            //return user;
+            return _membershipUnitOfWork.MembershipRepository.GetById(id);
+
         }
         public async Task<Guid> Add(ApplicationUser entity, Guid userRoleId, string newPassword)
         {
@@ -204,7 +184,7 @@ namespace Membership.Services
             }
         }
 
-        public async Task<Guid> Update(ApplicationUser entity, Guid UserRoleId)
+        public async Task<Guid> Update(ApplicationUser entity, string roleName)
         {
             using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
             {
@@ -212,14 +192,14 @@ namespace Membership.Services
                 {
                     var user = await this._userManager.FindByIdAsync(entity.Id.ToString());
 
-                    user.FullName = entity.FullName;
-                    user.UserName = entity.UserName;
+                   // user.FullName = entity.FullName;
+                    //user.Id = entity.UserName;
                     user.Email = entity.Email;
-                    user.PhoneNumber = entity.PhoneNumber;
-                    user.CreationTime = DateTime.Now;
-                    user.Gender = entity.Gender;
-                    user.ImageUrl = entity.ImageUrl ?? user.ImageUrl;
-                    user.CreatedBy = _currentUserService.UserId;
+                    //user.PhoneNumber = entity.PhoneNumber;
+                  //  user.CreationTime = DateTime.Now;
+                   // user.Gender = entity.Gender;
+                   // user.ImageUrl = entity.ImageUrl ?? user.ImageUrl;
+                    //user.CreatedBy = _currentUserService.UserId;
 
                     var userSaveResult = await this._userManager.UpdateAsync(user);
 
@@ -234,14 +214,15 @@ namespace Membership.Services
                         var roleRemoveResult = await _userManager.RemoveFromRolesAsync(user, previousUserRoles);
 
                     }
-                    var role = await _roleManager.FindByIdAsync(UserRoleId.ToString());
+                   // var role = await _roleManager.FindByIdAsync(UserRoleId.ToString());
+                   // var role = await _roleManager.GetRoleNameAsync();
 
-                    if (role == null)
-                    {
-                        throw new Exception();
-                    }
+                    //if (role == null)
+                    //{
+                    //    throw new Exception();
+                    //}
 
-                    var roleSaveResult = await _userManager.AddToRoleAsync(user, role.Name);
+                    var roleSaveResult = await _userManager.AddToRoleAsync(user, roleName);
 
                     scope.Complete();
 

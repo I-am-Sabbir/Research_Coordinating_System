@@ -19,7 +19,7 @@ namespace Research_Coordinating_System.Areas.Admin.Models.AssignCoordinator
                                     dataTables.PageIndex,
                                     dataTables.PageSize,
                                     dataTables.SearchText,
-                                    dataTables.GetSortText(new string[] { "Email" }));
+                                    dataTables.GetSortText(new string[] { "Email", "Id" }));
             return new
             {
                 rerecordsTotal = data.total,
@@ -27,7 +27,8 @@ namespace Research_Coordinating_System.Areas.Admin.Models.AssignCoordinator
                 data = (from record in data.records
                         select new string[]
                         {
-                                record.Email
+                                record.Email,
+                                record.Id.ToString()
                                 
                       
                         }

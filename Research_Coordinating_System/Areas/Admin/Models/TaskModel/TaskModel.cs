@@ -1,4 +1,5 @@
 ﻿using Framework.Services;
+using Membership.Services;
 using Research_Coordinating_System.Models;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Research_Coordinating_System.Areas.Admin.Models.TaskModel
 {
     public class TaskModel : TaskBaseModel
     {
-        public TaskModel( ITaskService taskService) : base ( taskService) { }
+        public TaskModel( ITaskService taskService, IUserService userService) : base ( taskService, userService) { }
         public TaskModel() : base () { }
 
         internal object GetTask(DataTablesAjaxRequestModel datatables)
@@ -33,6 +34,7 @@ namespace Research_Coordinating_System.Areas.Admin.Models.TaskModel
                         ).ToArray()
             };
         }
+
 
         internal string Delete(int Id)
         {

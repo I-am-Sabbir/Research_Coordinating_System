@@ -39,5 +39,43 @@ namespace Research_Coordinating_System.Areas.Admin.Controllers
             var data = model.GetUsers(tableModel);
             return Json(data);
         }
+
+
+        public IActionResult EditCategory(Guid UserId)
+        {
+            var model = new EditAssignModel();
+            model.Load(UserId);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult EditCategory([Bind(nameof(EditAssignModel.UserId),
+                                                nameof(EditAssignModel.Email))]
+                                            EditAssignModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    model.Edit();
+                    model.Response = new ResponseModel("Category editing successful.", ResponseType.Success);
+
+                    //logger code
+                    _logger.LogInformation("Category Edit Successful");
+
+                    return RedirectToAction("Index");
+
+                }
+                catch (Exception ex)
+                {
+                    model.Response = new ResponseModel("Category Edit Failued.", ResponseType.Failure);
+                    // error logger code
+                    _logger.LogError($"Category Edit 'Failed'. Excption is : {ex.Message}");
+                }
+            }
+            return View(model);
+        }
     }
 }

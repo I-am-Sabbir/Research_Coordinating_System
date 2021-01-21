@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Membership.Services
 {
-    public interface IUserService
+    public interface IUserService : IDisposable
     {
         public (IList<ApplicationUser> records, int total, int totalDisplay) GetAll(int pageIndex, int pageSize, string searchText, string sortText);
         public (IList<ApplicationUser> records, int total, int totalDisplay) GetAllAdmin(int pageIndex, int pageSize, string searchText, string sortText);

@@ -13,7 +13,7 @@ namespace Research_Coordinating_System.Areas.Admin.Models.AssignCoordinator
     {
         public string Email { get; set; }
         public Guid UserId { get; set; }
-        public string Role { get; set; }
+        //public string Role { get; set; }
 
         internal void Load(Guid id)
         {
@@ -37,21 +37,5 @@ namespace Research_Coordinating_System.Areas.Admin.Models.AssignCoordinator
             string roleName = "Coordinator";
             _userService.Update(user, roleName);
         }
-
-        //public IList<SelectListItem> GetRoleList()
-        //{
-        //    IList<SelectListItem> listItems = new List<SelectListItem>();
-
-        //    foreach (var item in _userService.Update())
-        //    {
-        //        var ctg = new SelectListItem
-        //        {
-        //            Text = item.Name,
-        //            Value = item.Id.ToString()
-        //        };
-        //        listItems.Add(ctg);
-        //    }
-        //    return listItems;
-        //}
     }
 }

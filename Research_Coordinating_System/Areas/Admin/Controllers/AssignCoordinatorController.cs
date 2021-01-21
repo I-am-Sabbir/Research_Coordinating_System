@@ -35,16 +35,16 @@ namespace Research_Coordinating_System.Areas.Admin.Controllers
         public IActionResult GetCategory()
         {
             var tableModel = new DataTablesAjaxRequestModel(Request);
-            var model = Startup.AutofacContainer.Resolve<AssignModel>();
+            var model = Startup.AutofacContainer.Resolve<AssignModel>() ;
             var data = model.GetUsers(tableModel);
             return Json(data);
         }
 
 
-        public IActionResult EditCategory(Guid UserId)
+        public IActionResult EditCategory(Guid id)
         {
             var model = new EditAssignModel();
-            model.Load(UserId);
+            model.Load(id);
 
             return View(model);
         }
@@ -65,7 +65,7 @@ namespace Research_Coordinating_System.Areas.Admin.Controllers
                     //logger code
                     _logger.LogInformation("Category Edit Successful");
 
-                    return RedirectToAction("Index");
+                    
 
                 }
                 catch (Exception ex)
@@ -75,7 +75,7 @@ namespace Research_Coordinating_System.Areas.Admin.Controllers
                     _logger.LogError($"Category Edit 'Failed'. Excption is : {ex.Message}");
                 }
             }
-            return View(model);
+            return RedirectToAction("Index");
         }
     }
 }

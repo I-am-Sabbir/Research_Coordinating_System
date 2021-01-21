@@ -55,6 +55,12 @@ namespace Membership.Services
             var result = query.AsNoTracking().ToList();
             return (result, 0, 0);
         }
+
+
+
+
+        
+
         public (IList<ApplicationUser> records, int total, int totalDisplay) GetAllAdmin(int pageIndex, int pageSize, string searchText, string sortText)
         {
             var users = new List<ApplicationUser>();
@@ -84,6 +90,13 @@ namespace Membership.Services
             var result = _membershipUnitOfWork.MembershipRepository.GetAll().ToList();
             return (result, 0, 0);
         }
+
+
+        public void Dispose()
+        {
+            _membershipUnitOfWork.Dispose();
+        }
+
 
         public ApplicationUser GetById(Guid id)
         {
@@ -212,20 +225,16 @@ namespace Membership.Services
                     if (previousUserRoles.Any())
                     {
                         var roleRemoveResult = await _userManager.RemoveFromRolesAsync(user, previousUserRoles);
-
                     }
                    // var role = await _roleManager.FindByIdAsync(UserRoleId.ToString());
-                   // var role = await _roleManager.GetRoleNameAsync();
+                    //var role = await _roleManager.GetRoleNameAsync();
 
                     //if (role == null)
                     //{
                     //    throw new Exception();
                     //}
-
                     var roleSaveResult = await _userManager.AddToRoleAsync(user, roleName);
-
                     scope.Complete();
-
                     return user.Id;
                 }
                 catch (Exception ex)

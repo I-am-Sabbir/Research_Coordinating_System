@@ -60,10 +60,10 @@ namespace Research_Coordinating_System.Areas.Admin.Controllers
                 try
                 {
                     model.Edit();
-                    model.Response = new ResponseModel("Category editing successful.", ResponseType.Success);
+                    model.Response = new ResponseModel("Role Assigned.", ResponseType.Success);
 
                     //logger code
-                    _logger.LogInformation("Category Edit Successful");
+                    _logger.LogInformation("Role  Assigned");
 
                     
 

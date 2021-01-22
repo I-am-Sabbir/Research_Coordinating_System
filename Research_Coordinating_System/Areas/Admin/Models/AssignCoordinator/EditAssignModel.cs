@@ -34,7 +34,7 @@ namespace Research_Coordinating_System.Areas.Admin.Models.AssignCoordinator
                 Id = this.UserId,
                Email = this.Email 
             };
-            string roleName = "Coordinator";
+            string roleName = "Faculty";
             _userService.Update(user, roleName);
         }
     }

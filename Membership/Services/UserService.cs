@@ -221,12 +221,12 @@ namespace Membership.Services
                         throw new Exception();
                     };
 
-                    var previousUserRoles = await _userManager.GetRolesAsync(user);
+                    var previousUserRoles = await this._userManager.GetRolesAsync(user);
                     if (previousUserRoles.Any())
                     {
                         var roleRemoveResult = await _userManager.RemoveFromRolesAsync(user, previousUserRoles);
                     }
-                   // var role = await _roleManager.FindByIdAsync(UserRoleId.ToString());
+                    // var role = await _roleManager.FindByIdAsync(UserRoleId.ToString());
                     //var role = await _roleManager.GetRoleNameAsync();
 
                     //if (role == null)

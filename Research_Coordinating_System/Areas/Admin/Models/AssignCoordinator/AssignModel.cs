@@ -30,7 +30,7 @@ namespace Research_Coordinating_System.Areas.Admin.Models.AssignCoordinator
                                 record.Email,
                                 record.Id.ToString()
                                 
-                      
+
                         }
                    ).ToArray()
 

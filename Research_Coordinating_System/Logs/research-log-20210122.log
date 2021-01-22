@@ -169,3 +169,360 @@ System.InvalidOperationException: This connection was used with an ambient trans
 2021-01-22 18:39:24.213 +06:00 [Information] User logged in.
 2021-01-22 18:39:48.921 +06:00 [Information] Application Starting up
 2021-01-22 18:40:11.338 +06:00 [Information] User logged in.
+2021-01-22 18:42:48.319 +06:00 [Information] Application Starting up
+2021-01-22 18:43:02.908 +06:00 [Information] User logged in.
+2021-01-22 18:43:11.145 +06:00 [Information] Category Edit Successful
+2021-01-22 18:43:15.751 +06:00 [Information] Category Edit Successful
+2021-01-22 18:43:19.825 +06:00 [Information] Category Edit Successful
+2021-01-22 18:43:25.964 +06:00 [Information] Category Edit Successful
+2021-01-22 18:43:32.861 +06:00 [Information] Category Edit Successful
+2021-01-22 18:43:37.747 +06:00 [Information] Category Edit Successful
+2021-01-22 18:43:42.963 +06:00 [Information] Category Edit Successful
+2021-01-22 18:43:46.556 +06:00 [Information] User logged out.
+2021-01-22 18:43:59.164 +06:00 [Information] User logged in.
+2021-01-22 18:44:02.066 +06:00 [Information] User logged out.
+2021-01-22 18:44:11.739 +06:00 [Information] User logged in.
+2021-01-22 18:44:16.016 +06:00 [Information] User logged out.
+2021-01-22 18:44:30.196 +06:00 [Information] User logged in.
+2021-01-22 18:44:33.566 +06:00 [Information] User logged out.
+2021-01-22 18:44:49.884 +06:00 [Information] User logged in.
+2021-01-22 18:44:52.288 +06:00 [Information] User logged out.
+2021-01-22 18:52:04.725 +06:00 [Information] Application Starting up
+2021-01-22 18:52:17.513 +06:00 [Information] User logged in.
+2021-01-22 18:53:06.685 +06:00 [Information] Application Starting up
+2021-01-22 18:53:19.513 +06:00 [Information] User logged in.
+2021-01-22 18:57:28.116 +06:00 [Information] Application Starting up
+2021-01-22 18:57:40.291 +06:00 [Information] User logged in.
+2021-01-22 19:29:48.913 +06:00 [Information] Application Starting up
+2021-01-22 19:30:14.555 +06:00 [Information] User logged in.
+2021-01-22 19:30:45.531 +06:00 [Information] Application Starting up
+2021-01-22 19:30:56.021 +06:00 [Information] User logged in.
+2021-01-22 19:57:18.321 +06:00 [Information] Application Starting up
+2021-01-22 19:57:53.759 +06:00 [Information] User logged in.
+2021-01-22 20:24:02.207 +06:00 [Information] Application Starting up
+2021-01-22 20:24:30.126 +06:00 [Information] User logged in.
+2021-01-22 20:29:21.476 +06:00 [Information] Application Starting up
+2021-01-22 20:29:40.576 +06:00 [Information] User logged in.
+2021-01-22 20:29:46.953 +06:00 [Information] Category Edit Successful
+2021-01-22 20:29:47.141 +06:00 [Error] An exception occurred while iterating over the results of a query for context type '"Membership.Contexts.ApplicationDbContext"'."
+""System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()"
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+2021-01-22 20:32:41.106 +06:00 [Information] Application Starting up
+2021-01-22 20:32:55.091 +06:00 [Information] User logged in.
+2021-01-22 20:33:01.624 +06:00 [Information] Role  Assigned
+2021-01-22 20:33:01.787 +06:00 [Error] An exception occurred while iterating over the results of a query for context type '"Membership.Contexts.ApplicationDbContext"'."
+""System.InvalidOperationException: This connection was used with an ambient transaction. The original ambient transaction needs to be completed before this connection can be used outside of it.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.HandleAmbientTransactions()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()"
+System.InvalidOperationException: This connection was used with an ambient transaction. The original ambient transaction needs to be completed before this connection can be used outside of it.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.HandleAmbientTransactions()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+2021-01-22 20:39:27.831 +06:00 [Information] Application Starting up
+2021-01-22 20:39:41.052 +06:00 [Information] User logged in.
+2021-01-22 20:39:46.876 +06:00 [Information] Role  Assigned
+2021-01-22 20:39:47.055 +06:00 [Error] An exception occurred while iterating over the results of a query for context type '"Membership.Contexts.ApplicationDbContext"'."
+""System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()"
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+2021-01-22 20:40:25.119 +06:00 [Error] An exception occurred while iterating over the results of a query for context type '"Membership.Contexts.ApplicationDbContext"'."
+""System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()"
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2021-01-22 20:40:25.124 +06:00 [Error] An exception occurred while iterating over the results of a query for context type '"Membership.Contexts.ApplicationDbContext"'."
+""System.InvalidOperationException: This connection was used with an ambient transaction. The original ambient transaction needs to be completed before this connection can be used outside of it.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.HandleAmbientTransactions()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()"
+System.InvalidOperationException: This connection was used with an ambient transaction. The original ambient transaction needs to be completed before this connection can be used outside of it.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.HandleAmbientTransactions()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+2021-01-22 20:40:32.745 +06:00 [Information] Application Starting up
+2021-01-22 20:41:01.914 +06:00 [Information] Application Starting up
+2021-01-22 20:41:15.702 +06:00 [Information] User logged in.
+2021-01-22 20:41:23.180 +06:00 [Information] Role  Assigned
+2021-01-22 20:41:23.502 +06:00 [Error] An exception occurred while iterating over the results of a query for context type '"Membership.Contexts.ApplicationDbContext"'."
+""System.InvalidOperationException: This connection was used with an ambient transaction. The original ambient transaction needs to be completed before this connection can be used outside of it.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.HandleAmbientTransactions()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()"
+System.InvalidOperationException: This connection was used with an ambient transaction. The original ambient transaction needs to be completed before this connection can be used outside of it.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.HandleAmbientTransactions()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+2021-01-22 20:47:28.402 +06:00 [Information] Application Starting up
+2021-01-22 20:47:45.630 +06:00 [Information] User logged in.
+2021-01-22 20:47:50.457 +06:00 [Information] User logged out.
+2021-01-22 20:48:00.560 +06:00 [Information] User logged in.
+2021-01-22 20:48:14.445 +06:00 [Information] Role  Assigned
+2021-01-22 20:48:14.659 +06:00 [Error] An exception occurred while iterating over the results of a query for context type '"Membership.Contexts.ApplicationDbContext"'."
+""System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()"
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+2021-01-22 20:49:03.875 +06:00 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Data.Repository`3.GetAll() in G:\Projects\Research_Coordinating_System\Data\Repository.cs:line 87
+   at Membership.Services.UserService.GetAllMembersAsync(Int32 pageIndex, Int32 pageSize, String searchText, String sortText) in G:\Projects\Research_Coordinating_System\Membership\Services\UserService.cs:line 90
+   at Research_Coordinating_System.Areas.Admin.Models.AssignCoordinator.AssignModel.GetAllUsers(DataTablesAjaxRequestModel dataTables) in G:\Projects\Research_Coordinating_System\Research_Coordinating_System\Areas\Admin\Models\AssignCoordinator\AssignModel.cs:line 20
+   at Research_Coordinating_System.Areas.Admin.Controllers.AssignCoordinatorController.GetUsers() in G:\Projects\Research_Coordinating_System\Research_Coordinating_System\Areas\Admin\Controllers\AssignCoordinatorController.cs:line 39
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-01-22 20:50:46.054 +06:00 [Information] Role  Assigned
+2021-01-22 20:51:22.632 +06:00 [Error] An exception occurred while iterating over the results of a query for context type '"Membership.Contexts.ApplicationDbContext"'."
+""System.InvalidOperationException: This connection was used with an ambient transaction. The original ambient transaction needs to be completed before this connection can be used outside of it.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.HandleAmbientTransactions()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()"
+System.InvalidOperationException: This connection was used with an ambient transaction. The original ambient transaction needs to be completed before this connection can be used outside of it.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.HandleAmbientTransactions()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+2021-01-22 20:52:23.021 +06:00 [Information] Application Starting up
+2021-01-22 20:52:37.135 +06:00 [Information] User logged in.
+2021-01-22 20:52:39.887 +06:00 [Information] User logged out.
+2021-01-22 20:52:48.442 +06:00 [Information] User logged in.
+2021-01-22 20:53:09.274 +06:00 [Information] Role  Assigned
+2021-01-22 20:54:26.741 +06:00 [Error] An exception occurred while iterating over the results of a query for context type '"Membership.Contexts.ApplicationDbContext"'."
+""System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()"
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2021-01-22 20:54:26.741 +06:00 [Error] An exception occurred while iterating over the results of a query for context type '"Membership.Contexts.ApplicationDbContext"'."
+""System.InvalidOperationException: This connection was used with an ambient transaction. The original ambient transaction needs to be completed before this connection can be used outside of it.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.HandleAmbientTransactions()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()"
+System.InvalidOperationException: This connection was used with an ambient transaction. The original ambient transaction needs to be completed before this connection can be used outside of it.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.HandleAmbientTransactions()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+2021-01-22 20:55:33.242 +06:00 [Information] Application Starting up
+2021-01-22 20:55:46.734 +06:00 [Information] User logged in.
+2021-01-22 20:55:54.437 +06:00 [Information] Role  Assigned
+2021-01-22 20:56:03.051 +06:00 [Error] An exception occurred while iterating over the results of a query for context type '"Membership.Contexts.ApplicationDbContext"'."
+""System.InvalidOperationException: This connection was used with an ambient transaction. The original ambient transaction needs to be completed before this connection can be used outside of it.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.HandleAmbientTransactions()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()"
+System.InvalidOperationException: This connection was used with an ambient transaction. The original ambient transaction needs to be completed before this connection can be used outside of it.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.HandleAmbientTransactions()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+2021-01-22 20:56:09.446 +06:00 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: This connection was used with an ambient transaction. The original ambient transaction needs to be completed before this connection can be used outside of it.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.HandleAmbientTransactions()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Data.Repository`3.GetAll() in G:\Projects\Research_Coordinating_System\Data\Repository.cs:line 87
+   at Membership.Services.UserService.GetAllMembersAsync(Int32 pageIndex, Int32 pageSize, String searchText, String sortText) in G:\Projects\Research_Coordinating_System\Membership\Services\UserService.cs:line 90
+   at Research_Coordinating_System.Areas.Admin.Models.AssignCoordinator.AssignModel.GetAllUsers(DataTablesAjaxRequestModel dataTables) in G:\Projects\Research_Coordinating_System\Research_Coordinating_System\Areas\Admin\Models\AssignCoordinator\AssignModel.cs:line 20
+   at Research_Coordinating_System.Areas.Admin.Controllers.AssignCoordinatorController.GetUsers() in G:\Projects\Research_Coordinating_System\Research_Coordinating_System\Areas\Admin\Controllers\AssignCoordinatorController.cs:line 39
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-01-22 20:56:15.641 +06:00 [Error] An exception occurred while iterating over the results of a query for context type '"Membership.Contexts.ApplicationDbContext"'."
+""System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()"
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+2021-01-22 21:00:46.202 +06:00 [Information] Application Starting up
+2021-01-22 21:01:02.503 +06:00 [Information] User logged in.
+2021-01-22 21:01:09.052 +06:00 [Information] Role  Assigned
+2021-01-22 21:01:09.276 +06:00 [Error] An exception occurred while iterating over the results of a query for context type '"Membership.Contexts.ApplicationDbContext"'."
+""System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()"
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2021-01-22 21:01:09.276 +06:00 [Error] An exception occurred while iterating over the results of a query for context type '"Membership.Contexts.ApplicationDbContext"'."
+""System.InvalidOperationException: This connection was used with an ambient transaction. The original ambient transaction needs to be completed before this connection can be used outside of it.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.HandleAmbientTransactions()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()"
+System.InvalidOperationException: This connection was used with an ambient transaction. The original ambient transaction needs to be completed before this connection can be used outside of it.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.HandleAmbientTransactions()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+2021-01-22 21:26:33.075 +06:00 [Information] Application Starting up
+2021-01-22 21:26:45.377 +06:00 [Information] User logged in.
+2021-01-22 21:27:07.491 +06:00 [Information] Role  Assigned
+2021-01-22 21:27:13.849 +06:00 [Error] An exception occurred while iterating over the results of a query for context type '"Membership.Contexts.ApplicationDbContext"'."
+""System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()"
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+2021-01-22 21:27:18.162 +06:00 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Data.Repository`3.GetAll() in G:\Projects\Research_Coordinating_System\Data\Repository.cs:line 87
+   at Membership.Services.UserService.GetAllMembersAsync(Int32 pageIndex, Int32 pageSize, String searchText, String sortText) in G:\Projects\Research_Coordinating_System\Membership\Services\UserService.cs:line 90
+   at Research_Coordinating_System.Areas.Admin.Models.AssignCoordinator.AssignModel.GetUsers(DataTablesAjaxRequestModel dataTables) in G:\Projects\Research_Coordinating_System\Research_Coordinating_System\Areas\Admin\Models\AssignCoordinator\AssignModel.cs:line 18
+   at Research_Coordinating_System.Areas.Admin.Controllers.AssignCoordinatorController.GetUsers() in G:\Projects\Research_Coordinating_System\Research_Coordinating_System\Areas\Admin\Controllers\AssignCoordinatorController.cs:line 39
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-01-22 21:32:41.750 +06:00 [Information] Application Starting up
+2021-01-22 21:33:38.732 +06:00 [Information] User logged in.
+2021-01-22 21:34:24.576 +06:00 [Information] Role  Assigned
+2021-01-22 21:34:41.197 +06:00 [Information] User logged out.
+2021-01-22 21:36:05.965 +06:00 [Information] User logged in.
+2021-01-22 21:36:44.464 +06:00 [Information] User logged out.
+2021-01-22 21:50:49.169 +06:00 [Information] Application Starting up
+2021-01-22 21:51:05.955 +06:00 [Information] User logged in.
+2021-01-22 21:51:11.319 +06:00 [Information] Role  Assigned
+2021-01-22 21:51:38.058 +06:00 [Information] User logged out.
+2021-01-22 21:51:54.527 +06:00 [Information] User logged in.
+2021-01-22 21:52:02.497 +06:00 [Information] User logged out.
+2021-01-22 21:52:27.252 +06:00 [Information] Application Starting up
+2021-01-22 21:52:44.305 +06:00 [Warning] Invalid password for user "fe45f819-6a08-4d9b-77da-08d886654102".
+2021-01-22 21:52:44.309 +06:00 [Warning] User "fe45f819-6a08-4d9b-77da-08d886654102" failed to provide the correct password.
+2021-01-22 21:52:50.936 +06:00 [Information] User logged in.
+2021-01-22 21:52:56.389 +06:00 [Information] Role  Assigned
+2021-01-22 21:53:01.777 +06:00 [Information] User logged out.
+2021-01-22 21:53:16.087 +06:00 [Information] User logged in.

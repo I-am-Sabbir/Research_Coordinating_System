@@ -10,7 +10,6 @@ namespace Research_Coordinating_System.Areas.Admin.Models.AssignCoordinator
     public class AssignBaseModel : AdminBaseModel, IDisposable
     {
         protected IUserService _userService;
-
         public AssignBaseModel(IUserService userService)
         {
             _userService = userService;
@@ -19,6 +18,7 @@ namespace Research_Coordinating_System.Areas.Admin.Models.AssignCoordinator
         public AssignBaseModel()
         {
             _userService = Startup.AutofacContainer.Resolve<IUserService>();
+
         }
 
         public void Dispose()

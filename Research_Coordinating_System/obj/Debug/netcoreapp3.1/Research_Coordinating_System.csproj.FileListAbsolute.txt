@@ -167,6 +167,7 @@ G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Research_Coordinating_System.TagHelpers.output.cache
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Research_Coordinating_System.RazorCoreGenerate.cache
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\AdminDashboard\Index.cshtml.g.cs
+G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\AssignCoordinator\EditRole.cshtml.g.cs
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\AssignCoordinator\Index.cshtml.g.cs
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Shared\_AdminLayout.cshtml.g.cs
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Shared\_LeftMenu.cshtml.g.cs
@@ -223,4 +224,3 @@ G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Research_Coordinating_System.dll
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Research_Coordinating_System.pdb
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Research_Coordinating_System.genruntimeconfig.cache
-G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\AssignCoordinator\EditRole.cshtml.g.cs

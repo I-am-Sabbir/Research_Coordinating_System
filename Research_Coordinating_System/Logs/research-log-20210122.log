@@ -526,3 +526,29 @@ System.InvalidOperationException: A second operation started on this context bef
 2021-01-22 21:52:56.389 +06:00 [Information] Role  Assigned
 2021-01-22 21:53:01.777 +06:00 [Information] User logged out.
 2021-01-22 21:53:16.087 +06:00 [Information] User logged in.
+2021-01-22 21:56:21.491 +06:00 [Information] Application Starting up
+2021-01-22 21:57:45.254 +06:00 [Information] User logged in.
+2021-01-22 21:58:40.369 +06:00 [Information] User logged in.
+2021-01-22 21:58:48.100 +06:00 [Information] User logged out.
+2021-01-22 21:59:17.512 +06:00 [Information] Role  Assigned
+2021-01-22 21:59:55.836 +06:00 [Information] User logged in.
+2021-01-22 22:00:11.703 +06:00 [Information] Application Starting up
+2021-01-22 22:00:27.223 +06:00 [Information] User logged in.
+2021-01-22 22:00:31.271 +06:00 [Information] User logged out.
+2021-01-22 22:00:45.526 +06:00 [Information] User logged in.
+2021-01-22 22:00:53.267 +06:00 [Information] Role  Assigned
+2021-01-22 22:00:53.450 +06:00 [Error] An exception occurred while iterating over the results of a query for context type '"Membership.Contexts.ApplicationDbContext"'."
+""System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()"
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+2021-01-22 22:01:43.669 +06:00 [Information] Application Starting up
+2021-01-22 22:02:05.333 +06:00 [Information] User logged in.
+2021-01-22 22:02:08.108 +06:00 [Information] User logged out.
+2021-01-22 22:02:16.626 +06:00 [Information] User logged in.
+2021-01-22 22:02:23.316 +06:00 [Information] Role  Assigned
+2021-01-22 22:02:28.451 +06:00 [Information] User logged out.
+2021-01-22 22:03:04.325 +06:00 [Information] User logged in.
+2021-01-22 22:03:12.573 +06:00 [Information] User logged out.

@@ -1,9 +1,11 @@
 ﻿@model Research_Coordinating_System.Areas.Admin.Models.AssignCoordinator.EditAssignModel
+
 @{
-    ViewData["Title"] = "EditCategory";
+    ViewData["Title"] = "EditRole";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
+<h1>EditRole</h1>
 
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -35,13 +37,13 @@
                     <!-- /.card-header -->
                     <div class="card-body">
                         <partial name="_ActionMessage" model="@Model.Response" />
-                        <form asp-area="Admin" asp-controller="AssignCoordinator" asp-action="EditCategory" method="post" class="form-horizontal">
+                        <form asp-area="Admin" asp-controller="AssignCoordinator" asp-action="EditRole" method="post" class="form-horizontal">
                             <div asp-validation-summary="All" class="text-danger"></div>
                             <input type="hidden" asp-for="UserId" />
                             <div class="form-group">
                                 <label asp-for="Email" class="col-md-2 control-label">Category Name</label>
                                 <div class="col-md-10">
-                                    <input asp-for="Email" class="form-control" readonly/>
+                                    <input asp-for="Email" class="form-control" readonly />
                                     <span asp-validation-for="Email" class="text-danger"></span>
                                 </div>
                             </div>

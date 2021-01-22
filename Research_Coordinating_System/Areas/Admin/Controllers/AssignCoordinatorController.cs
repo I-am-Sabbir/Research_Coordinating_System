@@ -32,7 +32,7 @@ namespace Research_Coordinating_System.Areas.Admin.Controllers
             return View(model);
         }
 
-        public IActionResult GetCategory()
+        public IActionResult GetUsers()
         {
             var tableModel = new DataTablesAjaxRequestModel(Request);
             var model = Startup.AutofacContainer.Resolve<AssignModel>() ;
@@ -41,7 +41,7 @@ namespace Research_Coordinating_System.Areas.Admin.Controllers
         }
 
 
-        public IActionResult EditCategory(Guid id)
+        public IActionResult EditRole(Guid id)
         {
             var model = new EditAssignModel();
             model.Load(id);
@@ -51,7 +51,7 @@ namespace Research_Coordinating_System.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult EditCategory([Bind(nameof(EditAssignModel.UserId),
+        public IActionResult EditRole([Bind(nameof(EditAssignModel.UserId),
                                                 nameof(EditAssignModel.Email))]
                                             EditAssignModel model)
         {

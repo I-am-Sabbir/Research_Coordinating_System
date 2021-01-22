@@ -152,3 +152,20 @@ System.InvalidOperationException: This connection was used with an ambient trans
 2021-01-22 00:40:07.099 +06:00 [Information] Category Edit Successful
 2021-01-22 00:40:12.102 +06:00 [Information] User logged out.
 2021-01-22 00:40:23.826 +06:00 [Information] User logged in.
+2021-01-22 18:35:18.562 +06:00 [Information] Application Starting up
+2021-01-22 18:35:58.666 +06:00 [Warning] Invalid password for user "fe45f819-6a08-4d9b-77da-08d886654102".
+2021-01-22 18:35:58.670 +06:00 [Warning] User "fe45f819-6a08-4d9b-77da-08d886654102" failed to provide the correct password.
+2021-01-22 18:36:03.841 +06:00 [Information] User logged in.
+2021-01-22 18:36:44.342 +06:00 [Information] User logged out.
+2021-01-22 18:36:54.414 +06:00 [Information] User logged in.
+2021-01-22 18:37:00.619 +06:00 [Information] User logged out.
+2021-01-22 18:37:11.149 +06:00 [Information] User logged in.
+2021-01-22 18:37:56.777 +06:00 [Information] User created a new account with password. Name: "bappy@gmail.com"
+2021-01-22 18:38:15.374 +06:00 [Information] User logged in.
+2021-01-22 18:38:37.985 +06:00 [Information] User logged out.
+2021-01-22 18:38:46.715 +06:00 [Information] User logged in.
+2021-01-22 18:38:57.500 +06:00 [Information] Category Edit Successful
+2021-01-22 18:39:10.697 +06:00 [Information] User logged out.
+2021-01-22 18:39:24.213 +06:00 [Information] User logged in.
+2021-01-22 18:39:48.921 +06:00 [Information] Application Starting up
+2021-01-22 18:40:11.338 +06:00 [Information] User logged in.

@@ -52,7 +52,8 @@ namespace Research_Coordinating_System.Areas.Admin.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult EditRole([Bind(nameof(EditAssignModel.UserId),
-                                                nameof(EditAssignModel.Email))]
+                                                nameof(EditAssignModel.Email),
+                                                nameof(EditAssignModel.Role))]
                                             EditAssignModel model)
         {
             if (ModelState.IsValid)
@@ -60,7 +61,7 @@ namespace Research_Coordinating_System.Areas.Admin.Controllers
                 try
                 {
                     model.Edit();
-                    model.Response = new ResponseModel("Role Assigned.", ResponseType.Success);
+                    model.Response = new ResponseModel($"Role Assigned To {model.Role}", ResponseType.Success);
 
                     //logger code
                     _logger.LogInformation("Role  Assigned");
@@ -74,8 +75,10 @@ namespace Research_Coordinating_System.Areas.Admin.Controllers
                     // error logger code
                     _logger.LogError($"Category Edit 'Failed'. Excption is : {ex.Message}");
                 }
+                
             }
-            return RedirectToAction("Index");
+            //return RedirectToAction("Index");
+            return View(model);
         }
     }
 }

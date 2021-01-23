@@ -8,7 +8,7 @@ using Research_Coordinating_System.Models;
 
 namespace Research_Coordinating_System.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Faculty")]
     public class DashboardController : Controller
     {
         public IActionResult Index()

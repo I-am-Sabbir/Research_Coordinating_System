@@ -1,0 +1,87 @@
+2021-01-24 01:05:24.380 +06:00 [Information] Application Starting up
+2021-01-24 01:05:53.470 +06:00 [Information] User logged in.
+2021-01-24 01:05:58.244 +06:00 [Information] User logged out.
+2021-01-24 01:06:20.153 +06:00 [Information] User logged in.
+2021-01-24 01:06:32.327 +06:00 [Information] Role  Assigned
+2021-01-24 01:06:38.031 +06:00 [Information] User logged out.
+2021-01-24 01:06:52.174 +06:00 [Information] User logged in.
+2021-01-24 01:06:55.745 +06:00 [Information] User logged out.
+2021-01-24 01:07:21.940 +06:00 [Information] Application Starting up
+2021-01-24 01:08:18.485 +06:00 [Information] User logged in.
+2021-01-24 01:08:22.422 +06:00 [Information] User logged out.
+2021-01-24 01:08:31.525 +06:00 [Information] User logged in.
+2021-01-24 01:08:51.581 +06:00 [Information] Role  Assigned
+2021-01-24 01:09:32.602 +06:00 [Information] Role  Assigned
+2021-01-24 01:10:09.590 +06:00 [Information] Application Starting up
+2021-01-24 01:10:28.033 +06:00 [Information] Role  Assigned
+2021-01-24 01:10:28.295 +06:00 [Error] An exception occurred while iterating over the results of a query for context type '"Membership.Contexts.ApplicationDbContext"'."
+""System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()"
+System.InvalidOperationException: A second operation started on this context before a previous operation completed. This is usually caused by different threads using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+2021-01-24 01:10:52.096 +06:00 [Information] Application Starting up
+2021-01-24 01:11:12.329 +06:00 [Information] Role  Assigned
+2021-01-24 01:11:12.658 +06:00 [Error] An exception occurred while iterating over the results of a query for context type '"Membership.Contexts.ApplicationDbContext"'."
+""System.InvalidOperationException: This connection was used with an ambient transaction. The original ambient transaction needs to be completed before this connection can be used outside of it.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.HandleAmbientTransactions()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()"
+System.InvalidOperationException: This connection was used with an ambient transaction. The original ambient transaction needs to be completed before this connection can be used outside of it.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.HandleAmbientTransactions()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+2021-01-24 01:11:26.769 +06:00 [Information] Application Starting up
+2021-01-24 01:11:37.017 +06:00 [Information] User logged out.
+2021-01-24 01:11:51.630 +06:00 [Information] User logged in.
+2021-01-24 01:12:11.499 +06:00 [Information] Role  Assigned
+2021-01-24 01:12:11.896 +06:00 [Error] An exception occurred while iterating over the results of a query for context type '"Membership.Contexts.ApplicationDbContext"'."
+""System.InvalidOperationException: This connection was used with an ambient transaction. The original ambient transaction needs to be completed before this connection can be used outside of it.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.HandleAmbientTransactions()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()"
+System.InvalidOperationException: This connection was used with an ambient transaction. The original ambient transaction needs to be completed before this connection can be used outside of it.
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.HandleAmbientTransactions()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+2021-01-24 01:21:15.991 +06:00 [Information] Application Starting up
+2021-01-24 01:21:38.969 +06:00 [Information] Role  Assigned
+2021-01-24 01:22:28.114 +06:00 [Information] Application Starting up
+2021-01-24 01:22:46.214 +06:00 [Information] Role  Assigned
+2021-01-24 01:22:52.536 +06:00 [Information] User logged out.
+2021-01-24 01:23:03.370 +06:00 [Information] User logged in.
+2021-01-24 01:23:24.967 +06:00 [Information] Application Starting up
+2021-01-24 01:23:37.434 +06:00 [Information] User logged out.
+2021-01-24 01:23:57.370 +06:00 [Information] User logged in.
+2021-01-24 01:24:04.575 +06:00 [Information] Role  Assigned
+2021-01-24 01:24:07.493 +06:00 [Information] User logged out.
+2021-01-24 01:24:21.351 +06:00 [Information] User logged in.
+2021-01-24 01:24:26.733 +06:00 [Information] User logged out.
+2021-01-24 01:34:40.434 +06:00 [Information] Application Starting up
+2021-01-24 01:34:58.615 +06:00 [Information] User logged in.
+2021-01-24 01:35:02.650 +06:00 [Information] User logged out.
+2021-01-24 01:35:10.390 +06:00 [Warning] Invalid password for user "fe45f819-6a08-4d9b-77da-08d886654102".
+2021-01-24 01:35:10.392 +06:00 [Warning] User "fe45f819-6a08-4d9b-77da-08d886654102" failed to provide the correct password.
+2021-01-24 01:35:16.026 +06:00 [Information] User logged in.
+2021-01-24 01:35:29.134 +06:00 [Information] Role  Assigned
+2021-01-24 01:35:46.624 +06:00 [Information] Role  Assigned
+2021-01-24 01:36:11.961 +06:00 [Information] Role  Assigned
+2021-01-24 01:36:15.111 +06:00 [Information] User logged out.
+2021-01-24 01:36:49.019 +06:00 [Information] User logged in.
+2021-01-24 01:36:58.293 +06:00 [Information] Role  Assigned
+2021-01-24 01:37:13.904 +06:00 [Information] User logged out.
+2021-01-24 01:37:28.005 +06:00 [Information] User logged in.
+2021-01-24 01:37:33.417 +06:00 [Information] User logged out.

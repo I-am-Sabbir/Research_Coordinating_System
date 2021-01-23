@@ -197,6 +197,54 @@ namespace Membership.Services
             }
         }
 
+        //public async Task<Guid> Update(ApplicationUser entity, string roleName)
+        //{
+        //    using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
+        //    {
+        //        try
+        //        {
+        //            var user = await this._userManager.FindByIdAsync(entity.Id.ToString());
+
+        //           // user.FullName = entity.FullName;
+        //            //user.Id = entity.UserName;
+        //            user.Email = entity.Email;
+        //            //user.PhoneNumber = entity.PhoneNumber;
+        //          //  user.CreationTime = DateTime.Now;
+        //           // user.Gender = entity.Gender;
+        //           // user.ImageUrl = entity.ImageUrl ?? user.ImageUrl;
+        //            //user.CreatedBy = _currentUserService.UserId;
+
+        //            var userSaveResult = await this._userManager.UpdateAsync(user);
+
+        //            if (!userSaveResult.Succeeded)
+        //            {
+        //                throw new Exception();
+        //            };
+
+        //            var previousUserRoles = await _userManager.GetRolesAsync(user);
+        //            if (previousUserRoles.Any())
+        //            {
+        //                var roleRemoveResult = await _userManager.RemoveFromRolesAsync(user, previousUserRoles);
+        //            }
+        //            // var role = await _roleManager.FindByIdAsync(UserRoleId.ToString());
+        //            //var role = await _roleManager.GetRoleNameAsync();
+
+        //            //if (role == null)
+        //            //{
+        //            //    throw new Exception();
+        //            //}
+        //            var roleSaveResult = await _userManager.AddToRoleAsync(user, roleName);
+        //            scope.Complete();
+        //            return user.Id;
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            scope.Dispose();
+        //            throw;
+        //        }
+        //    }
+        //}
+
         public async Task<Guid> Update(ApplicationUser entity, string roleName)
         {
             using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
@@ -204,24 +252,7 @@ namespace Membership.Services
                 try
                 {
                     var user = await this._userManager.FindByIdAsync(entity.Id.ToString());
-
-                   // user.FullName = entity.FullName;
-                    //user.Id = entity.UserName;
-                    user.Email = entity.Email;
-                    //user.PhoneNumber = entity.PhoneNumber;
-                  //  user.CreationTime = DateTime.Now;
-                   // user.Gender = entity.Gender;
-                   // user.ImageUrl = entity.ImageUrl ?? user.ImageUrl;
-                    //user.CreatedBy = _currentUserService.UserId;
-
-                    var userSaveResult = await this._userManager.UpdateAsync(user);
-
-                    if (!userSaveResult.Succeeded)
-                    {
-                        throw new Exception();
-                    };
-
-                    var previousUserRoles = await this._userManager.GetRolesAsync(user);
+                    var previousUserRoles = await _userManager.GetRolesAsync(user);
                     if (previousUserRoles.Any())
                     {
                         var roleRemoveResult = await _userManager.RemoveFromRolesAsync(user, previousUserRoles);
@@ -244,7 +275,6 @@ namespace Membership.Services
                 }
             }
         }
-
         public async Task<Guid> Update(ApplicationUser entity)
         {
             using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))

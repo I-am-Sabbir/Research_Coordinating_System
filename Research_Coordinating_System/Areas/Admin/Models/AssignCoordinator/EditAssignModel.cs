@@ -13,7 +13,7 @@ namespace Research_Coordinating_System.Areas.Admin.Models.AssignCoordinator
     {
         public string Email { get; set; }
         public Guid UserId { get; set; }
-        //public string Role { get; set; }
+        public string Role { get; set; }
 
         internal void Load(Guid id)
         {
@@ -34,8 +34,7 @@ namespace Research_Coordinating_System.Areas.Admin.Models.AssignCoordinator
                 Id = this.UserId,
                Email = this.Email 
             };
-            string roleName = "Coordinator";
-            _userService.Update(user, roleName);
+            _userService.Update(user, Role);
         }
     }
 }

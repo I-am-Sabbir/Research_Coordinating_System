@@ -22,7 +22,7 @@ namespace Research_Coordinating_System.Areas.Admin.Models.TaskModel
         [Display(Name = "DeadLine")]
         public DateTime DeadLine { get; set; }
         public string File { get; set; }
-        public string TaskAuthor { get; set; }
+        public string TaskAuthor { get; set; } = "Admin";
 
         [Required]
         [Display(Name = "Assigning To")]
@@ -37,7 +37,21 @@ namespace Research_Coordinating_System.Areas.Admin.Models.TaskModel
         {
 
         }
+        public IList<SelectListItem> GetUserList()
+        {
+            IList<SelectListItem> listItems = new List<SelectListItem>();
 
+            foreach (var item in _taskService.GetUser())
+            {
+                var user = new SelectListItem
+                {
+                    Text = item.Email,
+                    Value = item.Email
+                };
+                listItems.Add(user);
+            }
+            return listItems;
+        }
         public void Add()
         {
             var hostingEnvironment = Startup.AutofacContainer.Resolve<IWebHostEnvironment>();

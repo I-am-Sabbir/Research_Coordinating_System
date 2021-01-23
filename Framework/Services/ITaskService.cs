@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Framework.Entities;
+using Membership.Entities;
 
 namespace Framework.Services
 {
@@ -15,5 +16,7 @@ namespace Framework.Services
         void EditTask(Task task);
         Task GetTask(int Id);
         Task DeleteTask(int Id);
+        IList<ApplicationUser> GetUser();
+
     }
 }

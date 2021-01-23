@@ -4,16 +4,20 @@ using System.Text;
 using System.Linq;
 using Framework.Entities;
 using Framework.Repositories;
+using Membership.Entities;
+using Membership;
 
 namespace Framework.Services
 {
     public class TaskService : ITaskService
     {
         private IFrameworkUnitOfWork _frameworkUnitOfWork;
+        private IMembershipUnitOfWork _membershipUnitOfWork;
 
-        public TaskService(IFrameworkUnitOfWork frameworkUnitOfWork)
+        public TaskService(IFrameworkUnitOfWork frameworkUnitOfWork, IMembershipUnitOfWork membershipUnitOfWork)
         {
             _frameworkUnitOfWork = frameworkUnitOfWork;
+            _membershipUnitOfWork = membershipUnitOfWork;
         }
 
         public void CreateTask(Task task)
@@ -28,6 +32,11 @@ namespace Framework.Services
             existingTask.TaskName = task.TaskName;
             existingTask.DeadLine = task.DeadLine;
             _frameworkUnitOfWork.Save();
+        }
+
+        public IList<ApplicationUser> GetUser()
+        {
+            return _membershipUnitOfWork.MembershipRepository.GetAll().ToList();
         }
 
         public Task GetTask(int Id)

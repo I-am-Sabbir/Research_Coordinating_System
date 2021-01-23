@@ -43,5 +43,36 @@ namespace Research_Coordinating_System.Areas.Admin.Controllers
             var model = new AssignTaskModel();
             return View(model);
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult AssignTask([Bind(nameof(AssignTaskModel.TaskName),
+                                                nameof(AssignTaskModel.DeadLine),
+                                                nameof(AssignTaskModel.AssignesTo))]
+                                            AssignTaskModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    model.Add();
+                    model.Response = new ResponseModel($"Task Assigned To {model.AssignesTo}", ResponseType.Success);
+
+                    //logger code
+                    _logger.LogInformation("Task  Assigned");
+
+
+
+                }
+                catch (Exception ex)
+                {
+                    model.Response = new ResponseModel("Task Assigned Failed.", ResponseType.Failure);
+                    // error logger code
+                    _logger.LogError($"Task Assigned 'Failed'. Excption is : {ex.Message}");
+                }
+
+            }
+            return RedirectToAction("Index");
+        }
     }
 }

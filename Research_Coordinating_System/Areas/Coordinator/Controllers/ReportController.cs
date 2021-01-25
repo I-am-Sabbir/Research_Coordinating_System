@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Research_Coordinating_System.Areas.Coordinator.Models;
 
 namespace Research_Coordinating_System.Areas.Coordinator.Controllers
@@ -12,6 +14,15 @@ namespace Research_Coordinating_System.Areas.Coordinator.Controllers
     [Authorize(Roles = "Coordinator")]
     public class ReportController : Controller
     {
+
+        private readonly IConfiguration _configuration;
+        private readonly ILogger<ReportModel> _logger;
+
+        public ReportController(IConfiguration configuration, ILogger<ReportModel> logger)
+        {
+            _configuration = configuration;
+            _logger = logger;
+        }
         public IActionResult Index()
         {
             var model = new ReportModel();
@@ -26,7 +37,13 @@ namespace Research_Coordinating_System.Areas.Coordinator.Controllers
                                          ReportModel model)
         {
 
-            return View();
+            return RedirectToAction("Report",model);
+        }
+
+        public IActionResult Report(ReportModel model)
+        {
+
+            return View(model);
         }
     }
 }

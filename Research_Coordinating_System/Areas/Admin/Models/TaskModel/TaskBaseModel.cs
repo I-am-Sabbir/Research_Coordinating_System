@@ -27,6 +27,7 @@ namespace Research_Coordinating_System.Areas.Admin.Models.TaskModel
         public void Dispose()
         {
             _taskService.Dispose();
+            _userService.Dispose();
         }
     }
 }

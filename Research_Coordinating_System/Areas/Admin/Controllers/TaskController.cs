@@ -13,7 +13,7 @@ using Research_Coordinating_System.Models;
 namespace Research_Coordinating_System.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin,Coordinator")]
     public class TaskController : Controller
     {
         private readonly IConfiguration _configuration;

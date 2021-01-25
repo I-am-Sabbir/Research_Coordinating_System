@@ -1,11 +1,67 @@
-﻿@model Research_Coordinating_System.Areas.Coordinator.Models.ReportModel
-
-@{ 
-    ViewData["Title"] = "Index";
+﻿@model ReportModel
+@{
+    ViewData["Title"] = "Report";
     Layout = "~/Areas/Coordinator/Views/Shared/_CoordinatorLayout.cshtml";
 }
+<div class="content-wrapper">
+    <div class="text-center">
+        <img class="img-responsive" src="~/img/diuLogo.png" alt="Chania" width="70">
+        <h5><b>DAFFODIL INTERNATIONAL UNIVERSITY <br> DIVISION OF RESEARCH</b></h5>
+        <br />
+        <h6 class="text-blue"><b>RESEARCH PROGRESS REPORT : @Model.Quarter</b></h6>
+    </div>
+        <table class="table table-bordered" width="80%">
 
-<div class="text-center">
-    <img class="img-responsive" src="~/img/diuLogo.png" alt="Chania" width="70">
-    <h4>DAFFODIL INTERNATIONAL UNIVERSITY DIVISION OF RESEARCH</h4>
+            <tr>
+                <td> Department </td>
+                <td> @Model.Department </td>
+            </tr>
+
+            <tr>
+                <td> Date </td>
+                <td> @Model.Date </td>
+            </tr>
+
+            <tr>
+                <td> Quarter </td>  @if (Model.Quarter == "SPRING")
+                {
+                    <td><b> First Quarter (January - April) </b></td>
+ }
+                else if (Model.Quarter == "SUMMER")
+                {
+                    <td><b> Second Quarter (May - August) </b></td>
+}
+                else if (Model.Quarter == "FALL")
+                {
+                    <td><b> Third Quarter (Septepmber - December) </b></td>
+}
+                else
+                {
+                    <td><b> Not Found </b></td>
+}
+            </tr>
+
+            <tr>
+                <td> Name & Designation of Research Coordinator </td>  <td> @Model.NameAndDesignation </td>
+            </tr>
+
+        </table>
+        <br />
+        <table class="table table-bordered">
+            <tr class="bg-cyan">
+                <th class="text-dark" colspan="2"> PUBLICATION OVERVIEW </th>
+            </tr>
+
+            <tr>
+                <td><b> Categgory </b></td>  <td><b> Number </b></td>
+            </tr>
+
+            <tr>
+                <td> Scopus Indexed publications (journal, conference, book chapter)</td> <td> 10 </td>
+            </tr>
+
+            <tr>
+                <td> Non-Scopus Indexed publications (journal, conference, book chapter) </td>  <td> 0 </td>
+            </tr>
+        </table>
 </div>

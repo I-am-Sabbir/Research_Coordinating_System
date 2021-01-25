@@ -99,3 +99,28 @@ System.InvalidOperationException: This connection was used with an ambient trans
 2021-01-24 02:45:15.268 +06:00 [Information] User logged in.
 2021-01-24 02:47:35.456 +06:00 [Information] Application Starting up
 2021-01-24 02:48:14.047 +06:00 [Information] Task  Assigned
+2021-01-24 11:35:49.931 +06:00 [Information] Application Starting up
+2021-01-24 11:36:07.136 +06:00 [Information] User logged in.
+2021-01-24 11:36:20.165 +06:00 [Information] Role  Assigned
+2021-01-24 11:37:22.159 +06:00 [Information] Task  Assigned
+2021-01-24 11:46:42.168 +06:00 [Information] Application Starting up
+2021-01-24 11:47:00.677 +06:00 [Information] User logged in.
+2021-01-24 11:48:15.522 +06:00 [Information] Task  Assigned
+2021-01-24 11:48:57.566 +06:00 [Information] User logged out.
+2021-01-24 11:50:37.923 +06:00 [Information] Application Starting up
+2021-01-24 11:50:54.751 +06:00 [Information] User logged in.
+2021-01-24 11:51:23.739 +06:00 [Information] Role  Assigned
+2021-01-24 11:51:45.672 +06:00 [Information] User logged out.
+2021-01-24 11:52:00.385 +06:00 [Information] User logged in.
+2021-01-24 11:52:24.215 +06:00 [Information] User logged out.
+2021-01-24 11:52:36.002 +06:00 [Information] User logged in.
+2021-01-24 11:52:47.216 +06:00 [Information] Role  Assigned
+2021-01-24 11:53:31.970 +06:00 [Information] User logged out.
+2021-01-24 11:54:46.240 +06:00 [Information] User logged in.
+2021-01-24 11:55:37.411 +06:00 [Information] User logged out.
+2021-01-24 11:55:46.976 +06:00 [Information] User logged in.
+2021-01-24 11:55:54.921 +06:00 [Information] Role  Assigned
+2021-01-24 11:55:57.632 +06:00 [Information] User logged out.
+2021-01-24 11:56:07.169 +06:00 [Information] User logged in.
+2021-01-24 11:58:14.455 +06:00 [Information] Paper Added Sucessfully
+2021-01-24 12:00:54.929 +06:00 [Information] User logged out.

@@ -45,6 +45,7 @@ namespace Research_Coordinating_System.Migrations.Framework
                         .Annotation("SqlServer:Identity", "1, 1"),
                     PaperTilte = table.Column<string>(nullable: true),
                     AuthorName = table.Column<string>(nullable: true),
+                    JournalorConferenceName = table.Column<string>(nullable: true),
                     Volume = table.Column<string>(nullable: true),
                     Page = table.Column<string>(nullable: true),
                     ConferenceLocation = table.Column<string>(nullable: true),

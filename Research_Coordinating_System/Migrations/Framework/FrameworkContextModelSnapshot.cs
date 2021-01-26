@@ -47,6 +47,9 @@ namespace Research_Coordinating_System.Migrations.Framework
                     b.Property<string>("ConferenceLocation")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("JournalorConferenceName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Page")
                         .HasColumnType("nvarchar(max)");
 

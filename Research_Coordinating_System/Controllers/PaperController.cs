@@ -48,6 +48,7 @@ namespace Research_Coordinating_System.Controllers
         public IActionResult SubmitPaper([Bind(nameof(AddPaper.PaperTilte),
                                             nameof(AddPaper.AuthorName),
                                             nameof(AddPaper.PaperCategoryId),
+                                            nameof(AddPaper.JournalorConferenceName),
                                             nameof(AddPaper.Volume),
                                             nameof(AddPaper.Page),
                                             nameof(AddPaper.ConferenceLocation),

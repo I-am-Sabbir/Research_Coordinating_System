@@ -18,6 +18,9 @@ namespace Research_Coordinating_System.Models.Paper
         [Display(Name = "Title")]
         public string PaperTilte { get; set; }
 
+        [Display(Name = "Journal or Conference Name")]
+        public string JournalorConferenceName { get; set; }
+
         [Required]
         [Display(Name = "Author")]
         public string AuthorName { get; set; }
@@ -65,6 +68,7 @@ namespace Research_Coordinating_System.Models.Paper
             {
                 PaperTilte = this.PaperTilte,
                 AuthorName = this.AuthorName,
+                JournalorConferenceName = this.JournalorConferenceName,
                 PaperCategoryId = this.PaperCategoryId,
                 Volume = this.Volume,
                 Page = this.Page,

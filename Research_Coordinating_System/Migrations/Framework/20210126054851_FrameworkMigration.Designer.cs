@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Research_Coordinating_System.Migrations.Framework
 {
     [DbContext(typeof(FrameworkContext))]
-    [Migration("20210116142746_FrameworkMigration")]
+    [Migration("20210126054851_FrameworkMigration")]
     partial class FrameworkMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -47,6 +47,9 @@ namespace Research_Coordinating_System.Migrations.Framework
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ConferenceLocation")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("JournalorConferenceName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Page")

@@ -10,7 +10,7 @@ namespace Framework.Entities
         public int Id { get; set; }
         public string PaperTilte { get; set; }
         public string AuthorName { get; set; }
-        
+        public string JournalorConferenceName { get; set; }
         public string Volume { get; set; }
         public string Page { get; set; }
         public string ConferenceLocation { get; set; }

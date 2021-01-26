@@ -1,7 +1,8 @@
 ﻿@model ReportModel
 @{
-    ViewData["Title"] = "Report";
+    ViewBag.Title = "Report";
     Layout = "~/Areas/Coordinator/Views/Shared/_CoordinatorLayout.cshtml";
+    int count = 0;
 }
 <div class="content-wrapper">
     <div class="text-center">
@@ -60,7 +61,7 @@
 
         <tr>
             <td> Scopus Indexed publications (journal, conference, book chapter)</td>
-            <td> 10 </td>
+            <td> @ViewBag.ScopusCount </td>
         </tr>
 
         <tr>
@@ -75,7 +76,21 @@
         </tr>
 
         <tr>
-            <td><b>Source</b></td>  <td><b>Publication Details</b></td>
+            <td><b>Source</b></td>
+            <td><b>Publication Details</b></td>
+        </tr>
+        <tr>
+            <td>Journal</td>
+            <td>
+                @foreach (var Journal in ViewBag.ScopusJournal)
+                {
+
+                    <p>
+                        @{count++;} @count @Journal.AuthorName, @Journal.PaperTilte .(@Journal.Submitdate.Year)
+                    </p>
+                }
+                @{count = 0;}
+            </td>
         </tr>
     </table>
 
@@ -85,7 +100,21 @@
         </tr>
 
         <tr>
-            <td><b>Source</b></td>  <td><b>Publication Details</b></td>
+            <td><b>Source</b></td>
+            <td><b>Publication Details</b></td>
+        </tr>
+        <tr>
+            <td>Journal</td>
+            <td>
+                @foreach (var Journal in ViewBag.NonScopusJournal)
+                {
+
+                    <p>
+                        @{count++;} @count @Journal.AuthorName, @Journal.PaperTilte .(@Journal.Submitdate.Year)
+                    </p>
+                }
+                @{count = 0;}
+            </td>
         </tr>
     </table>
 

@@ -1,4 +1,5 @@
-﻿using Framework.Services;
+﻿using Framework.Entities;
+using Framework.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -22,13 +23,19 @@ namespace Research_Coordinating_System.Areas.Coordinator.Models
         [Display(Name = "Name & Designation of Coordinator")]
         public string NameAndDesignation { get; set; }
 
+        public PaperDetails PaperDetails { get; set; }
+        public PaperCategory PaperCategories { get; set; }
 
         public ReportModel(IPaperDetailsService paperDetailsService, IPaperCategoryService paperCategoryService) : base(paperDetailsService, paperCategoryService)
         {
 
         }
 
-        public ReportModel() : base() { }
+        public ReportModel() : base() 
+        {
+            PaperDetails = new PaperDetails();
+            PaperCategories = new PaperCategory();
+        }
 
 
 

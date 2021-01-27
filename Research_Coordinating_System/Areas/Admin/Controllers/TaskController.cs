@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Autofac;
 using Microsoft.AspNetCore.Authorization;
@@ -34,13 +35,16 @@ namespace Research_Coordinating_System.Areas.Admin.Controllers
         {
             var tableModel = new DataTablesAjaxRequestModel(Request);
             var model = Startup.AutofacContainer.Resolve<TaskModel>();
-            var data = model.GetTask(tableModel);
+            var currentUser = User.FindFirstValue(ClaimTypes.Name);
+            var data = model.GetTask(tableModel,currentUser);
+           
             return Json(data);
         }
 
         public IActionResult AssignTask()
         {
             var model = new AssignTaskModel();
+            ViewBag.TaskAuthor = User.FindFirstValue(ClaimTypes.Name);
             return View(model);
         }
 
@@ -48,11 +52,14 @@ namespace Research_Coordinating_System.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult AssignTask([Bind(nameof(AssignTaskModel.TaskName),
                                                 nameof(AssignTaskModel.DeadLine),
-                                                nameof(AssignTaskModel.AssignesTo))]
+                                                nameof(AssignTaskModel.AssignesTo),
+                                                nameof(AssignTaskModel.TaskAuthor))]
                                             AssignTaskModel model)
         {
+            var taskAuthor = model.TaskAuthor;
             if (ModelState.IsValid)
             {
+
                 try
                 {
                     model.Add();

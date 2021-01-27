@@ -22,7 +22,7 @@ namespace Research_Coordinating_System.Areas.Admin.Models.TaskModel
         [Display(Name = "DeadLine")]
         public DateTime DeadLine { get; set; }
         public string File { get; set; }
-        public string TaskAuthor { get; set; } = "Admin";
+        public string TaskAuthor { get; set; }
 
         [Required]
         [Display(Name = "Assigning To")]

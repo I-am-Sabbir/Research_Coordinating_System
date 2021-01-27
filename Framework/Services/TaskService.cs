@@ -62,6 +62,6 @@ namespace Framework.Services
             var result = _frameworkUnitOfWork.TaskRepository.GetAll().ToList();
             return (result, 0, 0);
         }
-   
+
     }
 }

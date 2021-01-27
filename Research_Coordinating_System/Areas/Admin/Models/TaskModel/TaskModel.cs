@@ -13,7 +13,7 @@ namespace Research_Coordinating_System.Areas.Admin.Models.TaskModel
         public TaskModel( ITaskService taskService, IUserService userService) : base ( taskService, userService) { }
         public TaskModel() : base () { }
 
-        internal object GetTask(DataTablesAjaxRequestModel datatables)
+        internal object GetTask(DataTablesAjaxRequestModel datatables, string currentuser)
         {
             var data = _taskService.GetTasks(datatables.PageIndex,
                                              datatables.PageSize,
@@ -24,6 +24,7 @@ namespace Research_Coordinating_System.Areas.Admin.Models.TaskModel
                 recordsTotal = data.total,
                 recordsFiltered = data.totalDisplay,
                 data = (from record in data.tasks
+                        where(record.TaskAuthor == currentuser)
                         select new string[]
                         {
                             record.TaskName,

@@ -2,3 +2,16 @@
 2021-01-28 00:30:49.372 +06:00 [Information] User logged in.
 2021-01-28 00:32:15.062 +06:00 [Information] Task  Assigned
 2021-01-28 00:32:32.224 +06:00 [Information] User logged out.
+2021-01-28 11:37:23.369 +06:00 [Information] Application Starting up
+2021-01-28 11:37:46.568 +06:00 [Warning] Invalid password for user "51cf3302-2fc8-4000-77db-08d886654102".
+2021-01-28 11:37:46.572 +06:00 [Warning] User "51cf3302-2fc8-4000-77db-08d886654102" failed to provide the correct password.
+2021-01-28 11:37:56.106 +06:00 [Information] User logged in.
+2021-01-28 11:38:29.755 +06:00 [Information] Task  Assigned
+2021-01-28 11:38:40.431 +06:00 [Information] User logged out.
+2021-01-28 12:10:32.640 +06:00 [Information] Application Starting up
+2021-01-28 12:10:49.602 +06:00 [Information] User logged in.
+2021-01-28 12:17:47.949 +06:00 [Information] Application Starting up
+2021-01-28 12:18:03.850 +06:00 [Information] User logged in.
+2021-01-28 12:20:10.618 +06:00 [Information] Application Starting up
+2021-01-28 12:20:26.781 +06:00 [Information] User logged in.
+2021-01-28 12:21:00.851 +06:00 [Information] Task  Assigned

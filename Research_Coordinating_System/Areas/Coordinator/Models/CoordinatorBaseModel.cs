@@ -63,7 +63,7 @@ namespace Research_Coordinating_System.Areas.Coordinator.Models
                     new MenuItem
                     {
                         Title = "Task",
-                        url = "/Admin/Task/Index"
+                        url = "/Coordinator/Task/Index"
 
                     },
 

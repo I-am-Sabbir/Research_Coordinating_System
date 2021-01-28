@@ -7,6 +7,7 @@ using Research_Coordinating_System.Areas.Admin.Models.AssignCoordinator;
 using Research_Coordinating_System.Models.Paper;
 using Autofac;
 using Research_Coordinating_System.Areas.Admin.Models.TaskModel;
+using Research_Coordinating_System.Areas.Coordinator.Models.TaskModel;
 
 namespace Research_Coordinating_System
 {
@@ -26,6 +27,7 @@ namespace Research_Coordinating_System
             builder.RegisterType<AssignModel>();
             builder.RegisterType<PaperModel>();
             builder.RegisterType<TaskModel>();
+            builder.RegisterType<CoordinatorTaskModel>();
 
             
 

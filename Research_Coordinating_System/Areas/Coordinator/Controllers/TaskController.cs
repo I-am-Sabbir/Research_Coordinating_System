@@ -8,36 +8,36 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using Research_Coordinating_System.Areas.Admin.Models.TaskModel;
+using Research_Coordinating_System.Areas.Coordinator.Models.TaskModel;
 using Research_Coordinating_System.Models;
 
-namespace Research_Coordinating_System.Areas.Admin.Controllers
+namespace Research_Coordinating_System.Areas.Coordinator.Controllers
 {
-    [Area("Admin")]
-    [Authorize(Roles = "Admin")]
+    [Area("Coordinator")]
+    [Authorize(Roles = "Coordinator")]
     public class TaskController : Controller
     {
         private readonly IConfiguration _configuration;
-        private readonly ILogger<TaskModel> _logger;
+        private readonly ILogger<CoordinatorTaskModel> _logger;
 
-        public TaskController(IConfiguration configuration, ILogger<TaskModel> logger)
+        public TaskController(IConfiguration configuration, ILogger<CoordinatorTaskModel> logger)
         {
             _configuration = configuration;
             _logger = logger;
         }
         public IActionResult Index()
         {
-            var model = Startup.AutofacContainer.Resolve<TaskModel>();
+            var model = Startup.AutofacContainer.Resolve<CoordinatorTaskModel>();
             return View(model);
         }
 
         public IActionResult GetTasks()
         {
             var tableModel = new DataTablesAjaxRequestModel(Request);
-            var model = Startup.AutofacContainer.Resolve<TaskModel>();
+            var model = Startup.AutofacContainer.Resolve<CoordinatorTaskModel>();
             var currentUser = User.FindFirstValue(ClaimTypes.Name);
-            var data = model.GetTask(tableModel,currentUser);
-           
+            var data = model.GetTask(tableModel, currentUser);
+
             return Json(data);
         }
 

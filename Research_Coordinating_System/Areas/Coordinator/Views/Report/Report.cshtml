@@ -4,198 +4,233 @@
     Layout = "~/Areas/Coordinator/Views/Shared/_CoordinatorLayout.cshtml";
     int count = 0;
 }
-<div class="content-wrapper">
-    <div class="text-center">
-        <img class="img-responsive" src="~/img/diuLogo.png" alt="Chania" width="70">
-        <h5><b>DAFFODIL INTERNATIONAL UNIVERSITY <br> DIVISION OF RESEARCH</b></h5>
+
+<div class="content-wrapper" >
+    <div id="printpage">
+        <div class="text-center">
+            <img class="img-responsive" src="~/img/diuLogo.png" alt="Chania" width="70">
+            <h5><b>DAFFODIL INTERNATIONAL UNIVERSITY <br> DIVISION OF RESEARCH</b></h5>
+            <br />
+            <h6 class="text-blue"><b>RESEARCH PROGRESS REPORT : @Model.Quarter</b></h6>
+        </div>
+
+        @*Header Table*@
+        <table class="table table-bordered" width="80%">
+
+            <tr>
+                <td> Department </td>
+                <td> @Model.Department </td>
+            </tr>
+
+            <tr>
+                <td> Date </td>
+                <td> @Model.Date </td>
+            </tr>
+
+            <tr>
+                <td> Quarter </td>  @if (Model.Quarter == "SPRING")
+                {
+                    <td><b> First Quarter (January - April) </b></td>
+                }
+                else if (Model.Quarter == "SUMMER")
+                {
+                    <td><b> Second Quarter (May - August) </b></td>
+                }
+                else if (Model.Quarter == "FALL")
+                {
+                    <td><b> Third Quarter (Septepmber - December) </b></td>
+                }
+                else
+                {
+                    <td><b> Not Found </b></td>
+                }
+            </tr>
+
+            <tr>
+                <td> Name & Designation of Research Coordinator </td>
+                <td> @Model.NameAndDesignation </td>
+            </tr>
+
+        </table>
         <br />
-        <h6 class="text-blue"><b>RESEARCH PROGRESS REPORT : @Model.Quarter</b></h6>
+
+        @*Overview or Count Table*@
+        <table class="table table-bordered">
+            <tr class="bg-cyan">
+                <th class="text-dark" colspan="2"> PUBLICATION OVERVIEW </th>
+            </tr>
+
+            <tr>
+                <td><b> Categgory </b></td>
+                <td><b> Number </b></td>
+            </tr>
+
+            <tr>
+                <td> Scopus Indexed publications (journal, conference, book chapter)</td>
+                <td> @ViewBag.ScopusCount </td>
+            </tr>
+
+            <tr>
+                <td> Non-Scopus Indexed publications (journal, conference, book chapter) </td>
+                <td> @ViewBag.NonScopusCount </td>
+            </tr>
+        </table>
+
+        <table class="table table-bordered">
+            <tr class="bg-cyan">
+                <th class="text-dark" colspan="2"> List of Scopus Indexed Publications </th>
+            </tr>
+
+            <tr>
+                <td><b>Source</b></td>
+                <td><b>Publication Details</b></td>
+            </tr>
+            <tr>
+                <td>Journal</td>
+                <td>
+                    @foreach (var Journal in ViewBag.ScopusJournal)
+                    {
+
+                        <p>
+                            @{count++;} @count . @Journal.AuthorName .(@Journal.Submitdate.Year).@Journal.PaperTilte .@Journal.JournalorConferenceName . @Journal.Volume, @Journal.Page
+                        </p>
+                    }
+                    @{count = 0;}
+                </td>
+            </tr>
+
+            <tr>
+                <td>Conference</td>
+                <td>
+                    @foreach (var Conference in ViewBag.ScopusConference)
+                    {
+                        <p>
+                            @{ count++;} @count . @Conference.AuthorName .(@Conference.Submitdate.Year).@Conference.PaperTilte .@Conference.JournalorConferenceName .@Conference.ConferenceLocation
+                        </p>
+                    }
+                    @{count = 0;}
+                </td>
+            </tr>
+            <tr>
+                <td>Book</td>
+                <td>
+                    @foreach (var Book in ViewBag.ScopusBook)
+                    {
+                        <p>
+                            @{ count++;} @count . @Book.AuthorName .(@Book.Submitdate.Year).@Book.PaperTilte.@Book.Volume, @Book.Page
+                        </p>
+                    }
+                    @{count = 0;}
+                </td>
+            </tr>
+        </table>
+
+        <table class="table table-bordered">
+            <tr class="bg-cyan">
+                <th class="text-dark" colspan="2">List of Non-Scopus Indexed Publications</th>
+            </tr>
+
+            <tr>
+                <td><b>Source</b></td>
+                <td><b>Publication Details</b></td>
+            </tr>
+            <tr>
+                <td>Journal</td>
+                <td>
+                    @foreach (var Journal in ViewBag.NonScopusJournal)
+                    {
+
+                        <p>
+                            @{count++;} @count @Journal.AuthorName, @Journal.PaperTilte .(@Journal.Submitdate.Year)
+                        </p>
+                    }
+                    @{count = 0;}
+                </td>
+            </tr>
+        </table>
+
+        <table class="table table-bordered">
+            <tr class="bg-cyan">
+                <th class="text-dark" colspan="5">List of Seminar/Workshop</th>
+            </tr>
+            <tr>
+                <td><b>Title</b></td>
+                <td><b>Resource Person</b></td>
+                <td><b>Date</b></td>
+                <td><b>Venue</b></td>
+                <td><b>Number of Participants</b></td>
+            </tr>
+
+            <tr>
+                <td>Null</td>
+                <td>Null</td>
+                <td>Null</td>
+                <td>Null</td>
+                <td>Null</td>
+            </tr>
+        </table>
+
+        <table class="table table-bordered">
+            <tr class="bg-cyan">
+                <th class="text-dark" colspan="4">Research Progress Workshop</th>
+            </tr>
+
+            <tr>
+                <td><b>Date</b></td>
+                <td><b>Venue</b></td>
+                <td><b>Number of Participants</b></td>
+                <td><b>Outcomes/Achievements</b></td>
+            </tr>
+
+            <tr>
+                <td>Null</td>
+                <td>Null</td>
+                <td>Null</td>
+                <td>Null</td>
+            </tr>
+        </table>
+
+        <table class="table table-bordered">
+            <tr class="bg-cyan">
+                <th class="text-dark" colspan="3">Students Involvement in Research and Publications</th>
+            </tr>
+
+            <tr>
+                <td><b>Name(s) of Student Author</b></td>
+                <td><b>Name(s) of Faculty Author</b></td>
+                <td><b>Number of Scopus Publications</b></td>
+            </tr>
+
+            <tr>
+                <td>Null</td>
+                <td>Null</td>
+                <td>Null</td>
+            </tr>
+        </table>
+
+        <table class="table table-bordered">
+            <tr class="bg-cyan">
+                <th class="text-dark" colspan="5">Research Networking- Joint Publications with local & Foreign University Faculty</th>
+            </tr>
+
+            <tr>
+                <td><b>Foreign University</b></td>
+                <td><b>Country</b></td>
+                <td><b>DIU Faculty</b></td>
+                <td><b>Foreign Faculty</b></td>
+                <td><b>Number of Publications</b></td>
+            </tr>
+
+            <tr>
+                <td>Foreign University</td>
+                <td>Country</td>
+                <td>DIU Faculty</td>
+                <td>Foreign Faculty</td>
+                <td>Number of Publications</td>
+            </tr>
+        </table>
     </div>
-    <table class="table table-bordered" width="80%">
-
-        <tr>
-            <td> Department </td>
-            <td> @Model.Department </td>
-        </tr>
-
-        <tr>
-            <td> Date </td>
-            <td> @Model.Date </td>
-        </tr>
-
-        <tr>
-            <td> Quarter </td>  @if (Model.Quarter == "SPRING")
-            {
-                <td><b> First Quarter (January - April) </b></td>
-            }
-            else if (Model.Quarter == "SUMMER")
-            {
-                <td><b> Second Quarter (May - August) </b></td>
-            }
-            else if (Model.Quarter == "FALL")
-            {
-                <td><b> Third Quarter (Septepmber - December) </b></td>
-            }
-            else
-            {
-                <td><b> Not Found </b></td>
-            }
-        </tr>
-
-        <tr>
-            <td> Name & Designation of Research Coordinator </td>
-            <td> @Model.NameAndDesignation </td>
-        </tr>
-
-    </table>
-    <br />
-    <table class="table table-bordered">
-        <tr class="bg-cyan">
-            <th class="text-dark" colspan="2"> PUBLICATION OVERVIEW </th>
-        </tr>
-
-        <tr>
-            <td><b> Categgory </b></td>
-            <td><b> Number </b></td>
-        </tr>
-
-        <tr>
-            <td> Scopus Indexed publications (journal, conference, book chapter)</td>
-            <td> @ViewBag.ScopusCount </td>
-        </tr>
-
-        <tr>
-            <td> Non-Scopus Indexed publications (journal, conference, book chapter) </td>
-            <td> 0 </td>
-        </tr>
-    </table>
-
-    <table class="table table-bordered">
-        <tr class="bg-cyan">
-            <th class="text-dark" colspan="2"> List of Scopus Indexed Publications </th>
-        </tr>
-
-        <tr>
-            <td><b>Source</b></td>
-            <td><b>Publication Details</b></td>
-        </tr>
-        <tr>
-            <td>Journal</td>
-            <td>
-                @foreach (var Journal in ViewBag.ScopusJournal)
-                {
-
-                    <p>
-                        @{count++;} @count @Journal.AuthorName, @Journal.PaperTilte .(@Journal.Submitdate.Year)
-                    </p>
-                }
-                @{count = 0;}
-            </td>
-        </tr>
-    </table>
-
-    <table class="table table-bordered">
-        <tr class="bg-cyan">
-            <th class="text-dark" colspan="2">List of Non-Scopus Indexed Publications</th>
-        </tr>
-
-        <tr>
-            <td><b>Source</b></td>
-            <td><b>Publication Details</b></td>
-        </tr>
-        <tr>
-            <td>Journal</td>
-            <td>
-                @foreach (var Journal in ViewBag.NonScopusJournal)
-                {
-
-                    <p>
-                        @{count++;} @count @Journal.AuthorName, @Journal.PaperTilte .(@Journal.Submitdate.Year)
-                    </p>
-                }
-                @{count = 0;}
-            </td>
-        </tr>
-    </table>
-
-    <table class="table table-bordered">
-        <tr class="bg-cyan">
-            <th class="text-dark" colspan="5">List of Seminar/Workshop</th>
-        </tr>
-        <tr>
-            <td><b>Title</b></td>
-            <td><b>Resource Person</b></td>
-            <td><b>Date</b></td>
-            <td><b>Venue</b></td>
-            <td><b>Number of Participants</b></td>
-        </tr>
-
-        <tr>
-            <td>Null</td>
-            <td>Null</td>
-            <td>Null</td>
-            <td>Null</td>
-            <td>Null</td>
-        </tr>
-    </table>
-
-    <table class="table table-bordered">
-        <tr class="bg-cyan">
-            <th class="text-dark" colspan="4">Research Progress Workshop</th>
-        </tr>
-
-        <tr>
-            <td><b>Date</b></td>
-            <td><b>Venue</b></td>
-            <td><b>Number of Participants</b></td>
-            <td><b>Outcomes/Achievements</b></td>
-        </tr>
-
-        <tr>
-            <td>Null</td>
-            <td>Null</td>
-            <td>Null</td>
-            <td>Null</td>
-        </tr>
-    </table>
-
-    <table class="table table-bordered">
-        <tr class="bg-cyan">
-            <th class="text-dark" colspan="3">Students Involvement in Research and Publications</th>
-        </tr>
-
-        <tr>
-            <td><b>Name(s) of Student Author</b></td>
-            <td><b>Name(s) of Faculty Author</b></td>
-            <td><b>Number of Scopus Publications</b></td>
-        </tr>
-
-        <tr>
-            <td>Null</td>
-            <td>Null</td>
-            <td>Null</td>
-        </tr>
-    </table>
-
-    <table class="table table-bordered">
-        <tr class="bg-cyan">
-            <th class="text-dark" colspan="5">Research Networking- Joint Publications with local & Foreign University Faculty</th>
-        </tr>
-
-        <tr>
-            <td><b>Foreign University</b></td>
-            <td><b>Country</b></td>
-            <td><b>DIU Faculty</b></td>
-            <td><b>Foreign Faculty</b></td>
-            <td><b>Number of Publications</b></td>
-        </tr>
-
-        <tr>
-            <td>Foreign University</td>
-            <td>Country</td>
-            <td>DIU Faculty</td>
-            <td>Foreign Faculty</td>
-            <td>Number of Publications</td>
-        </tr>
-    </table>
+    <div>
+        <button class="btn btn-block btn-primary" onclick="window.print()"><i class="" aria-hidden="true">Print</i></button>  
+    </div>
 </div>

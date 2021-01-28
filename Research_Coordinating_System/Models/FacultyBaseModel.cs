@@ -63,7 +63,7 @@ namespace Research_Coordinating_System.Models
                     new MenuItem
                     {
                         Title = "Task",
-                        url = "#"
+                        url = "/Task/Index"
 
                     },
                     new MenuItem

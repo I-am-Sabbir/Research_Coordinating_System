@@ -51,11 +51,16 @@ namespace Research_Coordinating_System.Areas.Coordinator.Controllers
             var nonScopusJournal = _frameworkContext.PaperDetails.Where(nsj => nsj.PaperCategoryId == 4).ToList();
             var nonScopusConference = _frameworkContext.PaperDetails.Where(nsc => nsc.PaperCategoryId == 5).ToList();
             var nonScopusBook = _frameworkContext.PaperDetails.Where(nsb => nsb.PaperCategoryId == 6).ToList();
-          
-          int scopuscount = scopusJournal.Count() + scopusConference.Count() + scopusBook.Count();
+
+            //Count
+            ViewBag.ScopusCount = scopusJournal.Count() + scopusConference.Count() + scopusBook.Count();
+            ViewBag.NonScopusCount = nonScopusJournal.Count() + nonScopusConference.Count() + nonScopusBook.Count();
           
             ViewBag.ScopusJournal = scopusJournal;
-            ViewBag.ScopusCount = scopuscount;
+            ViewBag.ScopusConference = scopusConference;
+            ViewBag.ScopusBook = scopusBook;
+
+
             ViewBag.NonScopusJournal = nonScopusJournal;
 
             return View(model);

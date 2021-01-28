@@ -226,3 +226,4 @@ G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Research_Coordinating_System.genruntimeconfig.cache
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Areas\Coordinator\Views\Task\Index.cshtml.g.cs
 G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Areas\Coordinator\Views\Task\AssignTask.cshtml.g.cs
+G:\Projects\Research_Coordinating_System\Research_Coordinating_System\obj\Debug\netcoreapp3.1\Razor\Views\Task\Index.cshtml.g.cs

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Membership.Entities;
 using Microsoft.AspNetCore.Authorization;
@@ -29,7 +30,33 @@ namespace Research_Coordinating_System.Controllers
             return View();
         }
 
-        
+        public async Task<IActionResult> Dashboard()
+        {
+            var userEmail = User.FindFirstValue(ClaimTypes.Name);
+            if (userEmail == null)
+            {
+                return RedirectToAction("Index");
+            }
+            var user = await _userManager.FindByNameAsync(userEmail);
+            var role = await _userManager.GetRolesAsync(user);
+            if (role.Contains("Admin") == true)
+            {
+                _logger.LogInformation("User logged in.");
+                return RedirectToAction("Index", "AdminDashboard", new { area = "Admin" });
+            }
+            else if (role.Contains("Coordinator") == true)
+            {
+                _logger.LogInformation("User logged in.");
+                return RedirectToAction("Index", "CoordinatorDashboard", new { area = "Coordinator" });
+            }
+            else if (role.Contains("Faculty") == true)
+            {
+                _logger.LogInformation("User logged in.");
+                return RedirectToAction("Index", "Dashboard", new { area = "" });
+            }
+            else
+                return RedirectToAction("Index");
+        }
         public IActionResult Privacy()
         {
             return View();

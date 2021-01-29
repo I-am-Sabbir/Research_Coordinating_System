@@ -107,3 +107,18 @@ Microsoft.CSharp.RuntimeBinder.RuntimeBinderException: 'Framework.Entities.Paper
    at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
 2021-01-29 02:37:15.711 +06:00 [Information] Application Starting up
+2021-01-29 15:51:39.956 +06:00 [Information] Application Starting up
+2021-01-29 15:51:55.213 +06:00 [Information] User logged in.
+2021-01-29 16:01:11.243 +06:00 [Information] Role  Assigned
+2021-01-29 16:06:48.457 +06:00 [Information] Task  Assigned
+2021-01-29 16:08:12.641 +06:00 [Information] User logged out.
+2021-01-29 16:08:25.618 +06:00 [Information] User logged in.
+2021-01-29 16:14:28.292 +06:00 [Information] User logged out.
+2021-01-29 16:14:41.191 +06:00 [Information] User logged in.
+2021-01-29 16:22:57.703 +06:00 [Information] Paper Added Sucessfully
+2021-01-29 16:35:53.844 +06:00 [Information] User logged out.
+2021-01-29 16:50:51.283 +06:00 [Information] Application Starting up
+2021-01-29 16:51:08.609 +06:00 [Information] User logged in.
+2021-01-29 16:51:55.806 +06:00 [Information] User created a new account with password. Name: "faculty@gmail.com"
+2021-01-29 16:52:14.034 +06:00 [Information] User logged out.
+2021-01-29 16:52:27.359 +06:00 [Information] User logged in.

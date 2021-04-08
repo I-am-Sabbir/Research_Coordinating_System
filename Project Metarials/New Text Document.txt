@@ -1,0 +1,6 @@
+Scopus Indexed Journal
+Scopus Indexed Conference Paper
+Scopus Indexed Book/ Book chapter
+Non-Scopus Indexed Journal
+Non-Scopus Indexed Conference
+Non-Scopus Indexed Book/ Book Chapter

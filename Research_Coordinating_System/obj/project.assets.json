@@ -3044,10 +3044,7 @@
         },
         "runtime": {
           "bin/placeholder/Data.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "Framework/1.0.0": {
         "type": "project",
@@ -3069,10 +3066,7 @@
         },
         "runtime": {
           "bin/placeholder/Framework.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "Membership/1.0.0": {
         "type": "project",
@@ -3096,10 +3090,7 @@
         },
         "runtime": {
           "bin/placeholder/Membership.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       }
     }
   },
@@ -9661,6 +9652,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
             "G:\\Projects\\Research_Coordinating_System\\Framework\\Framework.csproj": {
               "projectPath": "G:\\Projects\\Research_Coordinating_System\\Framework\\Framework.csproj"
@@ -9679,6 +9671,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Autofac.Extensions.DependencyInjection": {
             "target": "Package",
@@ -9751,7 +9744,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
